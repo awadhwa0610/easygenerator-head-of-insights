@@ -1,0 +1,113 @@
+
+--- Easygenerator - Head of Insights (1).pdf ---
+
+[Page 1]
+ANKUSH WADHWA
+SENIOR PRODUCT MANAGER (PRODUCT ANALYTICS & INSIGHTS)
+ankushwadhwa13@gmail.com | +1 647-809-3124 | Toronto, Canada | Nationality: Canadian
+DOB: 1988-06-10 | LinkedIn: https://www.linkedin.com/in/ankush-wadhwa-0610/ | Visa: Currently Outside UAE | Notice: 1 Month
+Expected Salary: AED 30,000/month
+Languages: English (Native) | Hindi (Native)
+https://github.com/awadhwa0610/ | https://www.linkedin.com/in/ankush-wadhwa-0610/
+PROFESSIONAL SUMMARY
+Strategic Insights Leader with 10+ years of experience bridging the gap between complex data infrastructure and product
+strategy, dedicated to driving 'customer value as a compass' through scalable analytics and human-centric user research. Expert
+in Product Analytics, SQL, and Snowflake, I champion a culture of analytics by translating data into clear, compelling narratives. I
+led a strategic initiative that achieved a 30% increase in acquisition channel growth through deep, strategic insights from data.
+KEY ACCOMPLISHMENTS
+- Driving deep, strategic insights from data at OLG to launch Apple Pay & Interac, resulting in a 30% increase in acquisition
+channel growth.
+- Scaling product analytics function as Founder of CuratedHim, utilizing Snowflake and RAG Agents to deliver personalized
+health insights to D2C users.
+- Championed a culture of analytics by implementing least-cost routing at OLG, reducing annual operational costs by $1.2M
+through data-driven optimization.
+- Translated user research into a redesigned Search-to-Book workflow at Ujala Enterprises, driving a 55% increase in B2B
+booking volume.
+SKILLS
+Technical Skills: Product Analytics, SQL, Python, R, Snowflake, Data Governance, API Integration, Vector Databases,
+Predictive Modeling
+Tools & Platforms: Mixpanel, Amplitude, Looker, Tableau, Power BI, JIRA, Confluence, Figma
+Methodologies: User Research, Data Storytelling, Agile Project Management, Cross-functional Leadership, Strategic Insights,
+A/B Testing, Mentoring & Coaching, Stakeholder Influence
+PROFESSIONAL EXPERIENCE
+Senior Product Manager (Strategy & Ops) November 2019 - Current
+Ontario Lottery & Gaming Corp (OLG) — Government of Ontario - Toronto, Canada
+- Driving deep, strategic insights from transactional data to optimize the digital wallet portfolio, resulting in a 30% increase in
+acquisition channel growth.
+- Champion a culture of analytics by utilizing SQL and Python for predictive modeling to forecast user transaction patterns,
+leading to a 15% improvement in successful user transactions.
+- Scaled product analytics function by implementing Real-Time Settlements and Looker dashboards, improving platform
+efficiency metrics and delivery speed by 20% for high-volume users.
+- Translate data and user research into clear, compelling narratives for senior leadership to exert stakeholder influence on
+least-cost routing and platform performance strategy.
+- Coached and mentored junior analysts on data storytelling techniques and SQL best practices, measurably improving team
+output quality and cross-functional alignment.
+
+[Page 2]
+- Led a cross-functional squad of engineers and designers to establish a data culture through weekly insights sharing, increasing
+data literacy across multiple product teams.
+Founder & Lead Architect (AI & Gen AI) January 2024 - Current
+Curatedhim - Healthcare SAAS - Toronto
+- Scaling product analytics function for a D2C health platform, embedding customer retention data and human-centric design into
+the rapid product development lifecycle.
+- Launched a context-aware AI agent using Snowflake and Postgres, driving user growth through hyper-personalized nutrition
+plans based on user research methodologies.
+- Designed experiments to improve user engagement, utilizing Mixpanel and Amplitude to track actionable insights that
+significantly increased customer retention rates.
+- Proactively managed data infrastructure and RAG architecture to ensure highly accurate, personalized outputs for 1,000+
+active health platform users.
+Portfolio Lead - (Independent Contractor) July 2022 - October 2024
+Smile Digital Health - Toronto, ON
+- Advocating for robust data governance practices by establishing a data ownership framework for clinical data interoperability
+and HL7/FHIR integration for international enterprise health clients.
+- Led cross-functional leadership initiatives to establish a consistent taxonomy for data platform integrations, accelerating data
+availability speed for external fulfillment partners.
+- Managed the end-to-end tracking plan for data infrastructure projects, ensuring seamless onboarding of complex health data for
+large-scale enterprise systems.
+Product Owner – Digital Experience May 2015 - August 2019
+Ujala Enterprises LLC - Bethesda, MD, USA
+- Optimized the B2B SaaS travel marketplace by designing experiments to improve booking conversion, resulting in a 55%
+increase in total revenue.
+- Utilized booking conversion insights and seller performance metrics to refine inventory mix, driving strategic growth across 3P
+fulfillment partner channels.
+- Translated user research into technical process changes for airline partners, significantly reducing booking errors and
+enhancing the overall customer experience.
+Senior Business Systems Analyst October 2013 - May 2014
+United Health Group - Eagen, MN
+- Championing data governance and privacy-first analytics by authoring detailed business requirements for vendor performance
+data and HIPAA compliance applications.
+- Supported high-level data infrastructure integrations using HL7 standards to ensure seamless data flow across disparate
+enterprise healthcare systems.
+- Analyzed complex vendor management requirements to optimize system functionality, ensuring 100% adherence to strict
+healthcare data privacy standards.
+Senior Business Analyst June 2012 - July 2013
+Mayo Clinic - Rochester, MN, USA
+- Overseeing user research to inform product decisions for the OSRP web portal, significantly improving patient data accessibility
+and digital user experience.
+- Facilitated JAD sessions to translate clinical requirements into user-friendly features, ensuring data accuracy standards were
+met across all digital patient touchpoints.
+- Utilized high-fidelity prototyping and process mapping to secure stakeholder influence, reducing development rework by 20%
+through early requirement validation.
+Business Analyst January 2012 - June 2012
+Prime Therapeutics - Eagan, MN, USA
+- Provided proactive insights that influence business decisions by identifying bottlenecks in high-volume claims adjudication
+
+[Page 3]
+workflows and pharmacy benefit processes.
+- Defined business rules for automated decision-making engines, reducing manual intervention rates and improving
+auto-adjudication efficiency by 15%.
+- Conducted root cause analysis on claims workflow analytics to implement process fixes, resulting in significant reductions in
+operational processing costs.
+Business Analyst May 2010 - January 2012
+Blue Cross Blue Shield - Baton Rouge, LA, USA
+- Interpreting complex data to inform strategic transitions during the federally mandated ICD-9 to ICD-10 diagnostic coding
+taxonomy migration project.
+- Developed detailed data migration crosswalk maps to ensure zero data loss while transitioning legacy diagnosis codes to new
+regulatory standards.
+- Maintained a rigorous requirements traceability matrix to ensure 100% regulatory compliance across the entire software
+development lifecycle.
+CERTIFICATIONS & LICENSES
+PMP - PMI (2020)
+CSPO - Scrum Alliance (2025)
+EDUCATION
+- Bachelor of Science, Computer Science, North Dakota State University, Fargo, USA, May 2010

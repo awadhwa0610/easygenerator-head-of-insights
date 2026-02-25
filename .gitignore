@@ -1,0 +1,9 @@
+events.csv
+mightymerge.io__6n3xp3sm/
+__pycache__/
+*.pyc
+.DS_Store
+.env
+*.egg-info/
+dist/
+build/

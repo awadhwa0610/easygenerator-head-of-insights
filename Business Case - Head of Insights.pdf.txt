@@ -1,0 +1,55 @@
+
+--- Business Case - Head of Insights.pdf ---
+
+[Page 1]
+ 
+Internal 
+Business Case Interview: Head of Insights 
+Purpose of the Case 
+This business case is designed to assess your ability to explore product usage data, 
+extract actionable insights, and develop a thoughtful data and research strategy for a 
+product initiative. It reflects the type of work you would engage in at Easygenerator, 
+collaborating cross-functionally, influencing product decisions through data, and 
+helping shape how we measure success. 
+Case Structure 
+The case consists of two parts: 
+Part 1: Exploratory Data Analysis & Insights 
+You will receive a sample dataset containing user-level and event-level product data. 
+Your task is to explore the data and deliver a concise, insight-driven report. 
+Your Objective 
+Generate meaningful insights from the data that help answer product and business 
+questions. You can structure your report as a slide deck, document, or notebook. 
+Whatever you prefer, as long as it is clear and actionable. While you can take the case 
+in whichever direction you want, here are some broad pointers:  
+• What drives engagement and retention 
+• How users experience the product 
+• Where the biggest opportunities for improvements are 
+What We’re Looking For 
+• Clarity of thought and prioritization 
+• Ability to uncover actionable insights, not just summarize the data 
+• Strong communication of findings (visuals, summaries, recommendations) 
+• Curiosity and product sense 
+
+[Page 2]
+ 
+Internal 
+Part 2: Data & Measurement Strategy for Product Launch 
+You will be given a short PRD (Product Requirements Document) describing an 
+upcoming feature or product launch. 
+Your Objective 
+Design a data strategy that will guide both the pre-launch discovery phase and post-
+launch evaluation. 
+What We’re Looking For 
+• Strategic thinking around metrics and validation 
+• Understanding of what “good” looks like for a product launch 
+• Familiarity with product analytics and insights best practices 
+Logistics 
+• Format: Submit a short report or slide deck for each part (whichever best fits 
+your style). 
+• Questions: There’s some internal lingo and Easygenerator specific parts in the 
+case. If you need clarification on anything in the case, don’t hesitate to reach out 
+over email and ask. 
+• Tools: You can use any tools (Excel, SQL, Python, etc.) you prefer. 
+• Time Estimate: We recommend spending no more than 3–5 hours in total. 
+• Deadline: Please send your work at least 24 hours prior to the scheduled 
+presentation time. 

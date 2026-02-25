@@ -1,0 +1,315 @@
+
+--- MLC Business Case PRD - Data - Part 2.pdf ---
+
+[Page 1]
+💱
+Business Case - MLC (Multi-
+language courses) 
+Status Complete
+Category Product Brief
+Team Collaboration Team
+Quarter Q1'25 Q2'25 Q3'24
+Last updated time
+👥
+Table of Contents
+Januar y 9 , 2026 548 PM
+T able of Cont ent s
+TL; DR
+PROBLEM
+What ʼ s t he Cust omer Pr oblem,  who is t he cust omer ,  and wh y does it mat t er?
+T ar get Segment
+What dat a suppor t s t he pr oblem?
+Wh y is no w t he r ight time t o sol v e t his pr oblem?
+SOLUTION 
+Pr oposed Solution
+Milest ones and Timeline
+Milest ones,  T ar get dat es & scope
+Cust omer Communic ation Plan
+A ssumptions,  Out st anding Issues,  and K e y Decisions
+LA UNCH
+Ho w Will t his Pr oduct be Launched?
+Metr ics t o T r ack and Ho w t o T r ack Them
+Business Case  ML C Mul ti-language courses)
+1
+
+[Page 2]
+TL; DR
+Product
+Hypothesis
+We believe that by building multi-language in one SCORM MLS
+targeting Tier 2 and 3 customers will significantly improve the user
+experience of managing languages and contribute to reducing the
+probability of churn.  
+ 
+Our success measures are: 
+ Increase the number of Automated Translations add-on purchases 
+ Reduce the number of duplicated courses created for translations
+over time
+What
+Manage all their translations via the original course. They wonʼt have
+to manage each language as a separate course.  
+  
+Submit their course in multiple languages as one SCORM package to
+their LMS systems. 
+Why Based on the CSM feedback in August 2024 Product Committee
+CSM.xlsx), MLS has been identified as the most critical need. 
+When
+Private beta release 
+ Milestone 1 Late May 2025 
+ Milestone 2 Late June 2025 
+ Milestone 3 Early July 2025 
+ 
+Release to all eligible customers: Mid-July 2025
+PROBLEM
+Whatʼs the Customer Problem, who is the customer, and why 
+does it matter?
+Companies building onboarding or training materials for global teams require 
+courses to be translated into multiple languages. While itʼs possible to translate 
+a course into multiple languages on EG, here are the key problems with the 
+current solution:
+Editing and managing existing translated courses: when changes need to 
+be made, each translated course needs to be manually edited and 
+translated. The higher the number of courses and translations, the more 
+time-consuming and difficult it gets.
+Def inition of Success,  A doption Go als/KPIs
+Business Case  ML C Mul ti-language courses)
+2
+
+[Page 3]
+Uploading courses onto LMS: the author is unable to upload the different 
+translations as a single SCROM package. They must manually upload all the 
+translations separately.
+Tracking course results: due to translations being their own courses, 
+authors donʼt have centralized analytics view which makes it hard to track 
+the course performance.
+Target Segment
+This problem is particularly felt by our Tier 2 and Tier 3 customers who have 
+staff all over the world and have many courses.
+For example, our customer Unicredit Italian bank) has 10k+ employees globally 
+and has thousands of courses. Majority of the time, they need the course in 3 
+languages English, Italian, German) but certain courses need to be translated 
+up to 40 languages. For these types of customers with such a scale, 
+Easygenerator wonʼt meet their needs.
+What data supports the problem?
+Our PM Nuno and Product Designer Raghul conducted 14 user interviews 
+between Q2Q3 2024
+6x Tier 3 Volvo, Unicredit, Nissan, Danone, Etex, Kantar
+6x Tier 2 Mint, Cartier, DEME, Arcus FM, Bacardi, Azelis
+1x Tier 0 Kolabori
+1x internal: Abigail Fairest
+Their research findings and summary can be found here: ML1S  Customer 
+Interview Research Outcome.xlsx. The key takeaways are:
+All participants indicated that the current system is challenging to manage. 
+Administrators struggle to find and update courses in various languages 
+and track completion rates.
+Business Case  ML C Mul ti-language courses)
+3
+
+[Page 4]
+All participants highlighted the need for centralized analytics for courses, 
+regardless of the language in which learners complete them.
+Why is now the right time to solve this problem?
+Based on the CSM feedback in August 2024 Product Committee CSM.xlsx), 
+MLS has been identified as the most critical need with the highest score 
+compared to other challenges / opportunities in the product. If we donʼt invest 
+into addressing the identified problems, it will increase the likelihood of 
+customers who bought Easygenerator for managing multiple language use 
+cases to churn.
+SOLUTION 
+Proposed Solution
+With multi-language in one SCORM MLS, our customers will benefit from:
+Manage all their translations via the original course. They wonʼt have to 
+manage each language as a separate course.
+When they make changes to the course, the changes will automatically 
+propagate to all the translated versions, and the text will be translated too.
+Submit their course in multiple languages as one SCORM package to their 
+LMS systems.
+Have centralized analytics view where they can look at course analytics on 
+the language level or as all languages combined
+Authorʼs perspective
+New entry point to translate default course into other languages 
+Figma).
+In Course settings  Translations, weʼve made changes:
+Introduce a new tab called “Multi-language versionsˮ
+Rename the “Course translationˮ into “Independent Coursesˮ 
+Figma)
+Move “Interface labelsˮ under “Multi-language versionˮ tab Figma). 
+This can only be edited after translations have been made.
+Business Case  ML C Mul ti-language courses)
+4
+
+[Page 5]
+In “Multi-language versionsˮ, the author can choose:
+Auto-translation
+Exporting XLIFF and importing the translated version 
+Manually translate 
+In the course, switch between the default language and the translated 
+language(s).
+Preview the course and preview the different translations.
+Changes to course structure, content and questions
+Changing the course structure can only be done in the default 
+language. Structural change is considered as adding/removing a 
+page, content block or question to the course. We will communicate 
+to the author that they canʼt edit a translated version.
+Changing content in the translated course is possible. Content is 
+meant by text, image, video, audio.
+Changing answers to questions isnʼt possible. We will communicate 
+that in-app.
+Change in the course structure in the default language will be 
+propagated to all translated versions. We will inform the author when 
+changing the course structure.
+Have centralised analytics to see data for the course as a whole or by 
+translated languages.
+NOTE Existing sections to be reused in a different course wonʼt be 
+available for auto-translatio.
+Learnerʼs perspective
+The learner will be able to select in which language he/she wants to 
+take. When the learner opens the course, a selection of translated 
+versions will pop up.
+The reviewer can also change the language.
+Reviewerʼs perspective
+The reviewer will be able to select in which language he/she wants to 
+take. When the reviewer opens the course, a selection of translated 
+Business Case  ML C Mul ti-language courses)
+5
+
+[Page 6]
+versions will pop up.
+The reviewer can also change the language.
+LMS integrations
+If we donʼt have an integration with the partner, the author manually 
+downloads the SCORM package and uploads it to their LMS system.
+If we have an integration with a partner, the author can push the update 
+via the integration.
+Milestones and Timeline
+As of 28th January, the remaining scope for MLS to complete stands at 173.5 
+story points (see dashboard). Further scope reductions are not feasible, as 
+doing so would significantly compromise the user experience. With our current 
+team capacity 2 full-time developers, 2 part-time developers), delivering MLS 
+in full would take approximately 7.5 months. This timeline does not account for 
+QA testing or unplanned work / unknown unknowns.
+To accelerate value delivery and incorporate customer feedback sooner, we 
+propose releasing MLS through a structured public BETA program. This offers 
+the following benefits:
+Deliver Incremental Value to Customers By releasing features iteratively, 
+we can provide functional value to customers earlier while continuing to 
+develop additional features.
+Set Clear Expectations Communicate the staged release process to beta 
+customers through documentation or onboarding sessions to align their 
+expectations.
+Milestones, Target dates & scope
+The MLS public BETA will be structured into multiple milestones, each with a 
+clearly defined target date, goal, and scope.
+Milestone 1  Create and distribute multilingual courses
+Goal Authors can create multiple translations in a single course and 
+distribute it to learners.
+Target date Late May 2025
+Scope:
+Business Case  ML C Mul ti-language courses)
+6
+
+[Page 7]
+Authoring Features
+Navigate to the translation configuration settings in the new 
+Editor
+Select languages and auto-translate (or manual translate)
+Select your default language
+Edit interface labels
+Edit existing MLS course
+Preview your course and select between languages
+Restrictions
+Prohibit course structure edits in child languages, restrict 
+section reuse
+Restrict authors from re-using sections in MLS courses
+Learner Features
+Learner can select a language in the MLS course
+Store languages in Gradebook
+Milestone 2  Enhance review and analytics capabilities
+Goal Implement analytics and expand author & reviewer functionalities.
+Target date Late June 2025
+Scope:
+Course Analytics
+View Insights
+View Gradebook
+View Survey
+Remove a translated language
+Reviewer can select a language in the MLS course
+Show comments specifically created in the selected course 
+language
+Export CSV will include all language versions
+Business Case  ML C Mul ti-language courses)
+7
+
+[Page 8]
+Duplicate the MLS course
+Milestone 3  Finalize missing MLS functionalities
+Goal: Deliver remaining key functionalities to prepare for a full release 
+of MLS
+Target date: Early July 2025
+Scope: 
+Translate via XLIFF
+Select which language to export as a PDF file
+Customer Communication Plan
+Effective customer communication is crucial to the success of the MLS private 
+beta program. Below is the plan outlining how customers will be engaged, 
+informed, and supported throughout the beta:
+Setting Clear Expectations
+Customers will be informed that MLS features will be released 
+iteratively, meaning not all functionalities will be available immediately.
+Communication will clearly outline the benefits of participating in the 
+beta program and what to expect in terms of incomplete features or 
+bugs during the beta phase.
+Feedback Collection
+During the beta, customers will be encouraged to provide feedback on:
+Usability of the released features.
+Challenges or issues encountered during their workflows.
+Feedback will be collected and managed by the PM (Anh) and Designer 
+Kate):
+11 interview with selected beta participants.
+Proactive follow-ups based on customer usage patterns.
+Closing the Beta Program
+Once all features are delivered, the beta program will be formally 
+closed, and MLS will be rolled out to all eligible customers.
+Business Case  ML C Mul ti-language courses)
+8
+
+[Page 9]
+Assumptions, Outstanding Issues, and Key 
+Decisions
+Q What other solution approaches did we explore?
+Answer: Before implementing the current MLS, we explored a different 
+approach. We looked at “Bundling Courses into a SCORM Packageˮ where 
+the author selects multiple languages and bundles them into one SCORM 
+package. We discarded this approach because it was a hack, it would make 
+future development difficult, and it didnʼt solve 2 core use cases:
+Editing and managing existing translated courses
+Tracking course results.
+Q Whatʼs the maximum size of the SCORM package we will support? Whatʼs 
+the max. of languages we will support?
+Answer: There are two limitations: 1 set by AWS translations service and 2 
+SCORM size limit of the LMS. For AWS, the downloading is capped at 15min 
+and different LMSes will have different limits (e.g. 100MB to 500MB. 
+Weʼve decided that we wonʼt set any limit until we see critical feedback 
+after beta milestone 1 release. If we see that the SCORM downloads fail 
+frequently, we will communicate in-product to make customers aware. We 
+wonʼt be able to affect the size limit on the LMSes side. The customer will 
+have to set the size limit accordingly in EG before uploading it to their LMS.
+LAUNCH
+How Will this Product be Launched?
+Pricing plan: 
+We will add MLS as part of the Automated Translations AT add-on 
+package.
+XLIFF translation will be moved from Enteprise plan to the AT add-on.
+All AT customers will get access to MLS. MLS can be disabled/enabled in 
+the Admin Dashboard in case customer-facing teams need to negotiate an 
+updated contract.
+Metrics to Track and How to Track Them
+REDACTED
+Business Case  ML C Mul ti-language courses)
+9
+
+[Page 10]
+Definition of Success, Adoption Goals/KPIs
+REDACTED
+Business Case  ML C Mul ti-language courses)
+10
