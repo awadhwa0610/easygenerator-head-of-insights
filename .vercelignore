@@ -1,4 +1,4 @@
-# Exclude large data files — only deploy the presentation + charts
+# Exclude large data files — only deploy the presentation + charts + screenshots
 events.csv
 authors.csv
 mightymerge.io__6n3xp3sm/
@@ -11,3 +11,4 @@ __pycache__/
 *.pdf.txt
 READ_ME.docx
 Job Description
+# Screenshots (Date Range of Events.png, Plan Distribution.png, etc.) are INCLUDED

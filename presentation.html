@@ -1,917 +1,1184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Easygenerator — Head of Insights Case Study | Ankush Wadhwa</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Easygenerator — Head of Insights Case Study | Ankush Wadhwa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-  :root {
-    --bg-primary: #0f172a;
-    --bg-card: #1e293b;
-    --bg-accent: #334155;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --accent-blue: #3b82f6;
-    --accent-purple: #8b5cf6;
-    --accent-cyan: #06b6d4;
-    --accent-amber: #f59e0b;
-    --accent-red: #ef4444;
-    --accent-green: #22c55e;
-  }
+    :root {
+      --bg-primary: #0f172a;
+      --bg-card: #1e293b;
+      --bg-accent: #334155;
+      --text-primary: #f1f5f9;
+      --text-secondary: #94a3b8;
+      --accent-blue: #3b82f6;
+      --accent-purple: #8b5cf6;
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-red: #ef4444;
+      --accent-green: #22c55e;
+    }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg-primary);
-    color: var(--text-primary);
-    overflow: hidden;
-    height: 100vh;
-  }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      overflow: hidden;
+      height: 100vh;
+    }
 
-  .slide-container {
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-  }
+    .slide-container {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
 
-  .slide {
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 60px;
-    position: absolute;
-    top: 0; left: 0;
-    animation: fadeIn 0.3s ease;
-  }
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 60px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: fadeIn 0.3s ease;
+    }
 
-  .slide.active { display: flex; }
+    .slide.active {
+      display: flex;
+    }
 
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
 
-  /* Title slide */
-  .slide-title {
-    text-align: center;
-  }
-  .slide-title h1 {
-    font-size: 3.2rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 16px;
-    line-height: 1.2;
-  }
-  .slide-title .subtitle {
-    font-size: 1.5rem;
-    color: var(--text-secondary);
-    font-weight: 300;
-    margin-bottom: 32px;
-  }
-  .slide-title .author {
-    font-size: 1.1rem;
-    color: var(--accent-cyan);
-    font-weight: 500;
-  }
-  .slide-title .date {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin-top: 8px;
-  }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-  /* Content slides */
-  .slide-content {
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-top: 40px;
-  }
-  .slide-content h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--accent-blue);
-    width: 100%;
-  }
-  .slide-content .slide-subtitle {
-    font-size: 1rem;
-    color: var(--text-secondary);
-    margin-bottom: 24px;
-    width: 100%;
-  }
-  .slide-content .content-body {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    gap: 30px;
-    overflow: hidden;
-  }
+    /* Title slide */
+    .slide-title {
+      text-align: center;
+    }
 
-  /* Chart + Commentary layout */
-  .chart-full {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-  }
-  .chart-full img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 12px;
-  }
+    .slide-title h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
 
-  .chart-with-notes {
-    display: flex;
-    gap: 30px;
-    width: 100%;
-    flex: 1;
-    min-height: 0;
-  }
-  .chart-side {
-    flex: 1.3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 0;
-  }
-  .chart-side img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 12px;
-  }
-  .notes-side {
-    flex: 0.7;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 14px;
-    min-width: 0;
-  }
+    .slide-title .subtitle {
+      font-size: 1.5rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      margin-bottom: 32px;
+    }
 
-  .insight-card {
-    background: var(--bg-card);
-    border-radius: 10px;
-    padding: 14px 18px;
-    border-left: 3px solid var(--accent-blue);
-    font-size: 0.88rem;
-    line-height: 1.5;
-  }
-  .insight-card.warning { border-left-color: var(--accent-amber); }
-  .insight-card.critical { border-left-color: var(--accent-red); }
-  .insight-card.success { border-left-color: var(--accent-green); }
-  .insight-card strong { color: var(--accent-cyan); }
-  .insight-card .label {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-secondary);
-    margin-bottom: 4px;
-  }
+    .slide-title .author {
+      font-size: 1.1rem;
+      color: var(--accent-cyan);
+      font-weight: 500;
+    }
 
-  /* KPI Grid */
-  .kpi-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    width: 100%;
-  }
-  .kpi-card {
-    background: var(--bg-card);
-    border-radius: 12px;
-    padding: 24px;
-    text-align: center;
-    border-top: 3px solid var(--accent-blue);
-  }
-  .kpi-card .value {
-    font-size: 2.4rem;
-    font-weight: 800;
-    color: var(--accent-cyan);
-    line-height: 1.2;
-  }
-  .kpi-card .label {
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    margin-top: 8px;
-  }
-  .kpi-card.amber { border-top-color: var(--accent-amber); }
-  .kpi-card.amber .value { color: var(--accent-amber); }
-  .kpi-card.green { border-top-color: var(--accent-green); }
-  .kpi-card.green .value { color: var(--accent-green); }
-  .kpi-card.purple { border-top-color: var(--accent-purple); }
-  .kpi-card.purple .value { color: var(--accent-purple); }
-  .kpi-card.red { border-top-color: var(--accent-red); }
-  .kpi-card.red .value { color: var(--accent-red); }
+    .slide-title .date {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
 
-  /* Table styles */
-  .data-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9rem;
-  }
-  .data-table th {
-    background: var(--bg-accent);
-    padding: 10px 14px;
-    text-align: left;
-    font-weight: 600;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--text-secondary);
-  }
-  .data-table td {
-    padding: 10px 14px;
-    border-bottom: 1px solid var(--bg-accent);
-  }
-  .data-table tr:hover td { background: rgba(59,130,246,0.05); }
+    /* Content slides */
+    .slide-content {
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 40px;
+    }
 
-  /* Split slide */
-  .split-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    width: 100%;
-    flex: 1;
-    min-height: 0;
-  }
-  .split-content img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border-radius: 12px;
-    align-self: center;
-  }
+    .slide-content h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--accent-blue);
+      width: 100%;
+    }
 
-  /* Navigation */
-  .nav-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background: rgba(15,23,42,0.95);
-    backdrop-filter: blur(10px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 30px;
-    border-top: 1px solid var(--bg-accent);
-    z-index: 100;
-  }
-  .nav-bar .slide-counter {
-    color: var(--text-secondary);
-    font-size: 0.85rem;
-    font-weight: 500;
-  }
-  .nav-btn {
-    background: var(--bg-card);
-    border: 1px solid var(--bg-accent);
-    color: var(--text-primary);
-    padding: 8px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-family: inherit;
-    font-size: 0.85rem;
-    transition: all 0.2s;
-  }
-  .nav-btn:hover { background: var(--accent-blue); border-color: var(--accent-blue); }
-  .nav-controls { display: flex; gap: 8px; }
+    .slide-content .slide-subtitle {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      width: 100%;
+    }
 
-  .progress-bar {
-    position: fixed;
-    top: 0; left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
-    transition: width 0.3s ease;
-    z-index: 100;
-  }
+    .slide-content .content-body {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      gap: 30px;
+      overflow: hidden;
+    }
 
-  /* Part divider */
-  .part-divider {
-    text-align: center;
-  }
-  .part-divider .part-label {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: var(--accent-purple);
-    margin-bottom: 16px;
-  }
-  .part-divider h2 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    color: var(--text-primary) !important;
-    text-align: center;
-  }
-  .part-divider p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    margin-top: 12px;
-    max-width: 600px;
-  }
+    /* Chart + Commentary layout */
+    .chart-full {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
 
-  /* Recommendation cards */
-  .rec-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    width: 100%;
-    flex: 1;
-  }
-  .rec-card {
-    background: var(--bg-card);
-    border-radius: 10px;
-    padding: 18px 20px;
-    border-left: 3px solid var(--accent-blue);
-  }
-  .rec-card h4 {
-    font-size: 0.95rem;
-    font-weight: 600;
-    margin-bottom: 6px;
-    color: var(--accent-cyan);
-  }
-  .rec-card p {
-    font-size: 0.82rem;
-    color: var(--text-secondary);
-    line-height: 1.5;
-  }
-  .rec-card.priority { border-left-color: var(--accent-red); }
-  .rec-card.growth { border-left-color: var(--accent-green); }
-  .rec-card.measure { border-left-color: var(--accent-purple); }
+    .chart-full img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+    }
 
-  /* Bullet list */
-  ul.clean-list {
-    list-style: none;
-    padding: 0;
-  }
-  ul.clean-list li {
-    padding: 8px 0;
-    padding-left: 24px;
-    position: relative;
-    font-size: 0.92rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-  }
-  ul.clean-list li::before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: var(--accent-blue);
-    font-weight: 600;
-  }
-  ul.clean-list li strong { color: var(--text-primary); }
+    .chart-with-notes {
+      display: flex;
+      gap: 30px;
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+    }
 
-  /* Tools slide */
-  .tools-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    width: 100%;
-  }
-  .tool-card {
-    background: var(--bg-card);
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-  }
-  .tool-card .tool-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--accent-cyan);
-    margin-bottom: 8px;
-  }
-  .tool-card .tool-desc {
-    font-size: 0.82rem;
-    color: var(--text-secondary);
-    line-height: 1.4;
-  }
-</style>
+    .chart-side {
+      flex: 1.3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .chart-side img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+    }
+
+    .notes-side {
+      flex: 0.7;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .insight-card {
+      background: var(--bg-card);
+      border-radius: 10px;
+      padding: 14px 18px;
+      border-left: 3px solid var(--accent-blue);
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+
+    .insight-card.warning {
+      border-left-color: var(--accent-amber);
+    }
+
+    .insight-card.critical {
+      border-left-color: var(--accent-red);
+    }
+
+    .insight-card.success {
+      border-left-color: var(--accent-green);
+    }
+
+    .insight-card strong {
+      color: var(--accent-cyan);
+    }
+
+    .insight-card .label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-secondary);
+      margin-bottom: 4px;
+    }
+
+    /* KPI Grid */
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+
+    .kpi-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      border-top: 3px solid var(--accent-blue);
+    }
+
+    .kpi-card .value {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--accent-cyan);
+      line-height: 1.2;
+    }
+
+    .kpi-card .label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-top: 8px;
+    }
+
+    .kpi-card.amber {
+      border-top-color: var(--accent-amber);
+    }
+
+    .kpi-card.amber .value {
+      color: var(--accent-amber);
+    }
+
+    .kpi-card.green {
+      border-top-color: var(--accent-green);
+    }
+
+    .kpi-card.green .value {
+      color: var(--accent-green);
+    }
+
+    .kpi-card.purple {
+      border-top-color: var(--accent-purple);
+    }
+
+    .kpi-card.purple .value {
+      color: var(--accent-purple);
+    }
+
+    .kpi-card.red {
+      border-top-color: var(--accent-red);
+    }
+
+    .kpi-card.red .value {
+      color: var(--accent-red);
+    }
+
+    /* Table styles */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+
+    .data-table th {
+      background: var(--bg-accent);
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-secondary);
+    }
+
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--bg-accent);
+    }
+
+    .data-table tr:hover td {
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    /* Split slide */
+    .split-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+    }
+
+    .split-content img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      border-radius: 12px;
+      align-self: center;
+    }
+
+    /* Navigation */
+    .nav-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      border-top: 1px solid var(--bg-accent);
+      z-index: 100;
+    }
+
+    .nav-bar .slide-counter {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .nav-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--bg-accent);
+      color: var(--text-primary);
+      padding: 8px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.85rem;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
+    }
+
+    .nav-controls {
+      display: flex;
+      gap: 8px;
+    }
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+      transition: width 0.3s ease;
+      z-index: 100;
+    }
+
+    /* Part divider */
+    .part-divider {
+      text-align: center;
+    }
+
+    .part-divider .part-label {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--accent-purple);
+      margin-bottom: 16px;
+    }
+
+    .part-divider h2 {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--text-primary) !important;
+      text-align: center;
+    }
+
+    .part-divider p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      margin-top: 12px;
+      max-width: 600px;
+    }
+
+    /* Recommendation cards */
+    .rec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      width: 100%;
+      flex: 1;
+    }
+
+    .rec-card {
+      background: var(--bg-card);
+      border-radius: 10px;
+      padding: 18px 20px;
+      border-left: 3px solid var(--accent-blue);
+    }
+
+    .rec-card h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--accent-cyan);
+    }
+
+    .rec-card p {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    .rec-card.priority {
+      border-left-color: var(--accent-red);
+    }
+
+    .rec-card.growth {
+      border-left-color: var(--accent-green);
+    }
+
+    .rec-card.measure {
+      border-left-color: var(--accent-purple);
+    }
+
+    /* Bullet list */
+    ul.clean-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.clean-list li {
+      padding: 8px 0;
+      padding-left: 24px;
+      position: relative;
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    ul.clean-list li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent-blue);
+      font-weight: 600;
+    }
+
+    ul.clean-list li strong {
+      color: var(--text-primary);
+    }
+
+    /* Tools slide */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      width: 100%;
+    }
+
+    .tool-card {
+      background: var(--bg-card);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .tool-card .tool-name {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent-cyan);
+      margin-bottom: 8px;
+    }
+
+    .tool-card .tool-desc {
+      font-size: 0.82rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="progress-bar" id="progressBar"></div>
+  <div class="progress-bar" id="progressBar"></div>
 
-<div class="slide-container" id="slideContainer">
+  <div class="slide-container" id="slideContainer">
 
-<!-- ═══════ SLIDE 1: TITLE ═══════ -->
-<div class="slide slide-title active" data-slide="1">
-  <h1>Easygenerator<br>Head of Insights</h1>
-  <div class="subtitle">Product Analytics Case Study</div>
-  <div class="author">Ankush Wadhwa</div>
-  <div class="date">Business Case Interview — 2025</div>
-</div>
-
-<!-- ═══════ SLIDE 2: APPROACH ═══════ -->
-<div class="slide slide-content" data-slide="2">
-  <h2>My Approach</h2>
-  <div class="slide-subtitle">How I analyzed 2.9M events across 63K authors</div>
-  <div class="content-body" style="flex-direction: column; gap: 20px;">
-    <div class="tools-grid">
-      <div class="tool-card">
-        <div class="tool-name">Python + Pandas</div>
-        <div class="tool-desc">Data loading, cleaning, joining 292 event files with 63K author records</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-name">Matplotlib + Seaborn</div>
-        <div class="tool-desc">Visualization & chart generation for all analytical outputs</div>
-      </div>
-      <div class="tool-card">
-        <div class="tool-name">Shell / CLI</div>
-        <div class="tool-desc">Rapid data profiling — schema inspection, cardinality checks, sampling</div>
-      </div>
+    <!-- ═══════ SLIDE 1: TITLE ═══════ -->
+    <div class="slide slide-title active" data-slide="1">
+      <h1>Easygenerator<br>Head of Insights</h1>
+      <div class="subtitle">Product Analytics Case Study</div>
+      <div class="author">Ankush Wadhwa</div>
+      <div class="date">Business Case Interview — 2025</div>
     </div>
-    <div style="display: flex; gap: 20px; flex:1;">
-      <div class="insight-card" style="flex:1;">
-        <div class="label">Data Sources</div>
-        <strong>authors.csv</strong> — 63,279 user records (country, plan, org, registration date)<br>
-        <strong>events (292 CSVs)</strong> — 2,913,500 product events from May 2025 (action, category, course, user, content type)
-      </div>
-      <div class="insight-card" style="flex:1;">
-        <div class="label">Analysis Steps</div>
-        1. Profile schemas & data quality checks<br>
-        2. Compute engagement, segmentation, & funnel metrics<br>
-        3. Feature adoption analysis (AI, SCORM, collaboration, translation)<br>
-        4. Geographic & temporal pattern discovery
-      </div>
-    </div>
-  </div>
-</div>
 
-<!-- ═══════ SLIDE 3: PART 1 DIVIDER ═══════ -->
-<div class="slide part-divider" data-slide="3">
-  <div class="part-label">Part 1</div>
-  <h2>Exploratory Data Analysis</h2>
-  <p>Insights from product usage data that help answer product and business questions</p>
-</div>
-
-<!-- ═══════ SLIDE 4: PLATFORM HEALTH ═══════ -->
-<div class="slide slide-content" data-slide="4">
-  <h2>Platform Scale & Health</h2>
-  <div class="slide-subtitle">Key metrics for May 2025</div>
-  <div class="content-body" style="flex-direction: column; gap: 20px;">
-    <div class="kpi-grid">
-      <div class="kpi-card"><div class="value">63,279</div><div class="label">Registered Authors</div></div>
-      <div class="kpi-card green"><div class="value">14,790</div><div class="label">MAU (May 2025)</div></div>
-      <div class="kpi-card amber"><div class="value">10.9%</div><div class="label">DAU/MAU Stickiness</div></div>
-      <div class="kpi-card purple"><div class="value">2.9M</div><div class="label">Total Events</div></div>
-    </div>
-    <div class="chart-with-notes" style="flex:1;">
-      <div class="chart-side"><img src="charts/14_stickiness.png" alt=""></div>
-      <div class="notes-side">
-        <div class="insight-card warning">
-          <div class="label">Observation</div>
-          <strong>DAU/MAU of 10.9%</strong> is below B2B SaaS benchmarks (13-20%). Expected for periodic authoring, but signals room for improvement.
+    <!-- ═══════ SLIDE 2: APPROACH ═══════ -->
+    <div class="slide slide-content" data-slide="2">
+      <h2>My Approach</h2>
+      <div class="slide-subtitle">How I analyzed 2.9M events across 63K authors</div>
+      <div class="content-body" style="flex-direction: column; gap: 20px;">
+        <div class="tools-grid">
+          <div class="tool-card">
+            <div class="tool-name">Python + Pandas</div>
+            <div class="tool-desc">Data loading, cleaning, joining 292 event files with 63K author records</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-name">Matplotlib + Seaborn</div>
+            <div class="tool-desc">Visualization & chart generation for all analytical outputs</div>
+          </div>
+          <div class="tool-card">
+            <div class="tool-name">Shell / CLI</div>
+            <div class="tool-desc">Rapid data profiling — schema inspection, cardinality checks, sampling</div>
+          </div>
         </div>
-        <div class="insight-card critical">
-          <div class="label">Concern</div>
-          Only <strong>23.4% of authors</strong> were active in May. 48,489 authors (76.6%) had zero events — a massive re-engagement opportunity.
+        <div style="display: flex; gap: 20px; flex:1;">
+          <div class="insight-card" style="flex:1;">
+            <div class="label">Data Sources</div>
+            <strong>authors.csv</strong> — 63,279 user records (country, plan, org, registration date)<br>
+            <strong>events (292 CSVs)</strong> — 2,913,500 product events from May 2025 (action, category, course, user,
+            content type)
+          </div>
+          <div class="insight-card" style="flex:1;">
+            <div class="label">Analysis Steps</div>
+            1. Profile schemas & data quality checks<br>
+            2. Compute engagement, segmentation, & funnel metrics<br>
+            3. Feature adoption analysis (AI, SCORM, collaboration, translation)<br>
+            4. Geographic & temporal pattern discovery
+          </div>
         </div>
       </div>
     </div>
+
+    <!-- ═══════ SLIDE 3: RAW DATA EXPLORATION ═══════ -->
+    <div class="slide slide-content" data-slide="3">
+      <h2>Raw Data Exploration</h2>
+      <div class="slide-subtitle">Shell + Python profiling before writing any analysis code — <a
+          href="https://github.com/awadhwa0610/easygenerator-head-of-insights/tree/main" target="_blank"
+          style="color:var(--accent-cyan); text-decoration:none;">All assets on GitHub ↗</a></div>
+      <div class="content-body"
+        style="display:grid; grid-template-columns: repeat(3,1fr); grid-template-rows: 1fr 1fr; gap:12px; flex:1; min-height:0;">
+        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+            Sample Dataset</div>
+          <img src="Sample Dataset.png" alt="Sample Dataset"
+            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+            Schema Inspection</div>
+          <img src="Schema Inspection.png" alt="Schema Inspection"
+            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+            Unique Active Users (MAU)</div>
+          <img src="Unique Active Users.png" alt="Unique Active Users"
+            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+            Plan Distribution</div>
+          <img src="Plan Distribution.png" alt="Plan Distribution"
+            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">Top
+            Events by Volume</div>
+          <img src="Top Events by Volume.png" alt="Top Events by Volume"
+            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+        </div>
+        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
+          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+            Date Range of Events</div>
+          <img src="Date Range of Events.png" alt="Date Range of Events"
+            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+        </div>
+      </div>
+      <div style="margin-top:10px; font-size:0.78rem; color:var(--text-secondary); text-align:center;">
+        Raw terminal output from initial data profiling — 2.9M events, 63K authors, May 2025 &nbsp;·&nbsp;
+        <a href="https://github.com/awadhwa0610/easygenerator-head-of-insights/tree/main" target="_blank"
+          style="color:var(--accent-cyan); text-decoration:none;">📁
+          github.com/awadhwa0610/easygenerator-head-of-insights</a>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 4: PART 1 DIVIDER ═══════ -->
+    <div class="slide part-divider" data-slide="4">
+      <div class="part-label">Part 1</div>
+      <h2>Exploratory Data Analysis</h2>
+      <p>Insights from product usage data that help answer product and business questions</p>
+    </div>
+
+    <!-- ═══════ SLIDE 5: PLATFORM HEALTH ═══════ -->
+    <div class="slide slide-content" data-slide="5">
+      <h2>Platform Scale & Health</h2>
+      <div class="slide-subtitle">Key metrics for May 2025</div>
+      <div class="content-body" style="flex-direction: column; gap: 20px;">
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="value">63,279</div>
+            <div class="label">Registered Authors</div>
+          </div>
+          <div class="kpi-card green">
+            <div class="value">14,790</div>
+            <div class="label">MAU (May 2025)</div>
+          </div>
+          <div class="kpi-card amber">
+            <div class="value">10.9%</div>
+            <div class="label">DAU/MAU Stickiness</div>
+          </div>
+          <div class="kpi-card purple">
+            <div class="value">2.9M</div>
+            <div class="label">Total Events</div>
+          </div>
+        </div>
+        <div class="chart-with-notes" style="flex:1;">
+          <div class="chart-side"><img src="charts/14_stickiness.png" alt=""></div>
+          <div class="notes-side">
+            <div class="insight-card warning">
+              <div class="label">Observation</div>
+              <strong>DAU/MAU of 10.9%</strong> is below B2B SaaS benchmarks (13-20%). Expected for periodic authoring,
+              but signals room for improvement.
+            </div>
+            <div class="insight-card critical">
+              <div class="label">Concern</div>
+              Only <strong>23.4% of authors</strong> were active in May. 48,489 authors (76.6%) had zero events — a
+              massive re-engagement opportunity.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 6: USER SEGMENTATION ═══════ -->
+    <div class="slide slide-content" data-slide="6">
+      <h2>The "Missing Middle" Problem</h2>
+      <div class="slide-subtitle">70% of active users are light users — the middle tiers are underdeveloped</div>
+      <div class="chart-with-notes" style="flex:1; width:100%;">
+        <div class="chart-side"><img src="charts/02_user_segmentation.png" alt=""></div>
+        <div class="notes-side">
+          <div class="insight-card critical">
+            <div class="label">Key Finding</div>
+            <strong>70.2% of active users</strong> only use the platform 1-3 days/month. Just 0.4% are power users.
+          </div>
+          <div class="insight-card">
+            <div class="label">What This Means</div>
+            Most users create content sporadically. The gap between Light (1-3 days) and Casual (4-9 days) is where
+            intervention can drive the most value.
+          </div>
+          <div class="insight-card success">
+            <div class="label">Recommendation</div>
+            Build engagement loops: incomplete course nudges, collaborative review invitations, weekly content
+            performance digests to activate light users.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 7: PLAN ENGAGEMENT ═══════ -->
+    <div class="slide slide-content" data-slide="7">
+      <h2>Engagement by Plan Tier</h2>
+      <div class="slide-subtitle">Team & Pro users are most engaged per-capita; Enterprise has massive seat
+        underutilization</div>
+      <div class="chart-with-notes" style="flex:1; width:100%;">
+        <div class="chart-side"><img src="charts/03_plan_engagement.png" alt=""></div>
+        <div class="notes-side">
+          <div class="insight-card success">
+            <div class="label">Team Plan Outperforms</div>
+            <strong>326 events/user, 5.6 courses/user</strong> — the most engaged cohort. Active L&D teams collaborating
+            heavily.
+          </div>
+          <div class="insight-card warning">
+            <div class="label">Enterprise Seat Utilization</div>
+            Enterprise drives 57% of total events but only <strong>189 events/user</strong>. Many underutilized seats =
+            expansion opportunity.
+          </div>
+          <div class="insight-card critical">
+            <div class="label">Trial ≈ Free</div>
+            Trial (58 events) ≈ Free (61 events). <strong>The trial isn't demonstrating paid value.</strong> Funnel
+            redesign needed.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 8: ACTIVE VS DORMANT ═══════ -->
+    <div class="slide slide-content" data-slide="8">
+      <h2>Active vs Dormant Users</h2>
+      <div class="slide-subtitle">76.6% of registered authors had zero activity in May — a re-engagement opportunity
+      </div>
+      <div class="chart-with-notes" style="flex:1; width:100%;">
+        <div class="chart-side"><img src="charts/15_active_dormant.png" alt=""></div>
+        <div class="notes-side">
+          <div class="insight-card">
+            <div class="label">The Gap</div>
+            <strong>48,489 authors</strong> are dormant. Segmenting by recency and plan tier would enable targeted
+            win-back campaigns.
+          </div>
+          <div class="insight-card">
+            <div class="label">Plan Breakdown</div>
+            <img src="charts/13_plan_distribution.png" alt="" style="width:100%; border-radius:8px; margin-top:8px;">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 9: USER FUNNEL ═══════ -->
+    <div class="slide slide-content" data-slide="9">
+      <h2>User Journey Funnel</h2>
+      <div class="slide-subtitle">From sign-in to value delivery — where users drop off</div>
+      <div class="chart-with-notes" style="flex:1; width:100%;">
+        <div class="chart-side"><img src="charts/04_user_funnel.png" alt=""></div>
+        <div class="notes-side">
+          <div class="insight-card">
+            <div class="label">Sign In → Edit</div>
+            11% drop — some users sign in for admin/review tasks only
+          </div>
+          <div class="insight-card warning">
+            <div class="label">Preview → Publish</div>
+            <strong>~1,039 users preview but never publish.</strong> These "almost there" users could be nudged with
+            in-app prompts.
+          </div>
+          <div class="insight-card">
+            <div class="label">Publish → SCORM</div>
+            41% drop — many share via private link rather than SCORM. Different distribution patterns.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 10: FEATURE ADOPTION ═══════ -->
+    <div class="slide slide-content" data-slide="10">
+      <h2>Feature Adoption</h2>
+      <div class="slide-subtitle">Collaboration is the most adopted advanced feature; AI shows strong growth</div>
+      <div class="chart-with-notes" style="flex:1; width:100%;">
+        <div class="chart-side"><img src="charts/05_feature_adoption.png" alt=""></div>
+        <div class="notes-side">
+          <div class="insight-card success">
+            <div class="label">Collaboration = Stickiest</div>
+            <strong>58% of MAU</strong> use collaboration features. Co-authoring correlates with deeper engagement — use
+            as account health indicator.
+          </div>
+          <div class="insight-card">
+            <div class="label">AI Adoption</div>
+            <strong>31.4% of MAU use EasyAI</strong> — primarily Enterprise (57%) and Team (28%). Position AI as
+            conversion driver for Free → Paid.
+          </div>
+          <div class="insight-card">
+            <div class="label">Translation Baseline</div>
+            <strong>815 users (5.5%)</strong> use translation — this is the MLC pre-launch baseline. Critical for Part
+            2.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 11: DAILY + TEMPORAL ═══════ -->
+    <div class="slide slide-content" data-slide="11">
+      <h2>Temporal Patterns</h2>
+      <div class="slide-subtitle">Peak activity mid-week, European business hours (UTC), negligible weekends</div>
+      <div class="split-content" style="flex:1; width:100%;">
+        <img src="charts/06_daily_activity.png" alt="" style="width:100%;">
+        <img src="charts/07_temporal_patterns.png" alt="" style="width:100%;">
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 12: RETENTION ═══════ -->
+    <div class="slide slide-content" data-slide="12">
+      <h2>Weekly Retention</h2>
+      <div class="slide-subtitle">Week-over-week retention declining from 60.4% to 47.7% — warrants monitoring</div>
+      <div class="chart-with-notes" style="flex:1; width:100%;">
+        <div class="chart-side"><img src="charts/08_weekly_retention.png" alt=""></div>
+        <div class="notes-side">
+          <div class="insight-card critical">
+            <div class="label">Declining Trend</div>
+            Retention dropped from <strong>60.4% → 47.7%</strong> across May. Roughly half of users active in any given
+            week don't return the following week.
+          </div>
+          <div class="insight-card">
+            <div class="label">Context</div>
+            This may be seasonal or reflect the periodic nature of course authoring. Need 6-12 months of data to
+            separate structural vs. seasonal patterns.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 13: GEOGRAPHY + CONTENT ═══════ -->
+    <div class="slide slide-content" data-slide="13">
+      <h2>Geographic Engagement & Content Depth</h2>
+      <div class="slide-subtitle">Non-English markets significantly more engaged; Text + Image blocks dominate</div>
+      <div class="split-content" style="flex:1; width:100%;">
+        <img src="charts/09_geographic_engagement.png" alt="">
+        <img src="charts/10_content_blocks.png" alt="">
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 14: CREATION METHODS ═══════ -->
+    <div class="slide slide-content" data-slide="14">
+      <h2>Course Creation Methods</h2>
+      <div class="slide-subtitle">AI-assisted creation is already the 2nd most popular method</div>
+      <div class="chart-with-notes" style="flex:1; width:100%;">
+        <div class="chart-side"><img src="charts/11_creation_methods.png" alt=""></div>
+        <div class="notes-side">
+          <div class="insight-card success">
+            <div class="label">AI Traction</div>
+            <strong>"Describe & Generate" (7,226)</strong> nearly matches Dynamic (7,870). AI is reshaping how courses
+            are built.
+          </div>
+          <div class="insight-card warning">
+            <div class="label">Template Underuse</div>
+            Templates only at <strong>767 uses</strong> despite organizational template features existing. Opportunity
+            to promote as productivity multiplier.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 15: RECOMMENDATIONS ═══════ -->
+    <div class="slide slide-content" data-slide="15">
+      <h2>Strategic Recommendations</h2>
+      <div class="slide-subtitle">Three priorities, three growth opportunities, two measurement improvements</div>
+      <div class="rec-grid" style="flex:1; width:100%;">
+        <div class="rec-card priority">
+          <h4>🎯 1. Address the "Missing Middle"</h4>
+          <p>70% of users are light. Build engagement loops: incomplete course nudges, collaborative review invitations,
+            weekly content performance digests.</p>
+        </div>
+        <div class="rec-card priority">
+          <h4>🎯 2. Fix the Trial → Paid Funnel</h4>
+          <p>Trial users (58 events) ≈ Free users (61 events). Redesign trial to guide users through Create →
+            Collaborate → Publish lifecycle.</p>
+        </div>
+        <div class="rec-card priority">
+          <h4>🎯 3. Re-engage Dormant Authors</h4>
+          <p>48,489 authors (77%) had zero May activity. Segment by recency and plan for targeted win-back campaigns.
+          </p>
+        </div>
+        <div class="rec-card growth">
+          <h4>📈 4. AI as Conversion Driver</h4>
+          <p>31% adoption with strong Enterprise skew. Position EasyAI more prominently in Free/Trial as a value
+            differentiator.</p>
+        </div>
+        <div class="rec-card growth">
+          <h4>📈 5. Collaboration for Expansion</h4>
+          <p>58% of active users collaborate. Build health scores around collaboration depth per org for CSM-driven
+            retention.</p>
+        </div>
+        <div class="rec-card growth">
+          <h4>📈 6. Non-English Market Potential</h4>
+          <p>Brazil (560 evt/user) is 2.7× more engaged than US (206). These markets benefit disproportionately from
+            MLC.</p>
+        </div>
+        <div class="rec-card measure">
+          <h4>🔍 7. Track Course Lifecycle</h4>
+          <p>Add metrics for time-to-first-publish, publish-to-learner-completion, and course iteration cycles.</p>
+        </div>
+        <div class="rec-card measure">
+          <h4>🔍 8. Org Health Dashboards</h4>
+          <p>Per-org metrics for active users, courses, publishing rates, and feature adoption to enable CSM-driven
+            retention.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 16: PART 2 DIVIDER ═══════ -->
+    <div class="slide part-divider" data-slide="16">
+      <div class="part-label">Part 2</div>
+      <h2>Data & Measurement Strategy</h2>
+      <p>MLC (Multi-Language Courses) — Pre-launch baselines, success metrics, and experiment design</p>
+    </div>
+
+    <!-- ═══════ SLIDE 17: TRANSLATION BASELINE ═══════ -->
+    <div class="slide slide-content" data-slide="17">
+      <h2>Current Translation Baseline</h2>
+      <div class="slide-subtitle">815 users already use translation features — this is our MLC "before" picture</div>
+      <div class="chart-with-notes" style="flex:1; width:100%;">
+        <div class="chart-side"><img src="charts/12_translation_baseline.png" alt=""></div>
+        <div class="notes-side">
+          <div class="insight-card">
+            <div class="label">Current State</div>
+            <strong>6,523 translation events</strong> from 815 users. Auto-translation dominates. XLIFF usage minimal
+            (67 exports, 64 imports) — confirms PRD finding.
+          </div>
+          <div class="insight-card success">
+            <div class="label">Why This Matters</div>
+            These 815 users are:<br>
+            • Our best <strong>beta candidates</strong><br>
+            • Our <strong>baseline cohort</strong> for measuring MLC impact<br>
+            • Proof of demand for the feature
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 18: PRE-LAUNCH BASELINES ═══════ -->
+    <div class="slide slide-content" data-slide="18">
+      <h2>Pre-Launch: Baselines to Establish</h2>
+      <div class="slide-subtitle">Before we launch, we need to measure what "before" looks like</div>
+      <div class="content-body" style="flex-direction: column; gap: 16px; overflow-y: auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Source</th>
+              <th>Current Baseline</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Translation feature users/month</td>
+              <td>Events data</td>
+              <td><strong>815 users</strong></td>
+            </tr>
+            <tr>
+              <td>Auto-translation events/month</td>
+              <td>Events data</td>
+              <td><strong>6,523 events</strong></td>
+            </tr>
+            <tr>
+              <td>XLIFF export/import volume</td>
+              <td>Events data</td>
+              <td><strong>67 exports, 64 imports</strong></td>
+            </tr>
+            <tr>
+              <td>Duplicated courses per org (translation-driven)</td>
+              <td>DB query</td>
+              <td><em>To be measured</em></td>
+            </tr>
+            <tr>
+              <td>Time to create translated course (E2E)</td>
+              <td>Session analysis</td>
+              <td><em>To be measured</em></td>
+            </tr>
+            <tr>
+              <td>Tier 2/3 churn rate (pre-MLC)</td>
+              <td>Subscription data</td>
+              <td><em>To be measured</em></td>
+            </tr>
+            <tr>
+              <td>NPS/CSAT for translation workflows</td>
+              <td>Survey</td>
+              <td><em>To be measured</em></td>
+            </tr>
+            <tr>
+              <td>SCORM download failures (size-related)</td>
+              <td>Server logs</td>
+              <td><em>To be measured</em></td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="insight-card warning" style="margin-top:8px;">
+          <div class="label">Critical Pre-Launch Action</div>
+          Measure duplicated courses created specifically for translation per Tier 2/3 org. The MLC hypothesis centers
+          on reducing this — we need a defensible baseline before launch.
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 19: EVENT TAXONOMY ═══════ -->
+    <div class="slide slide-content" data-slide="19">
+      <h2>Tracking Plan: New Event Taxonomy</h2>
+      <div class="slide-subtitle">28 new events aligned to the 3 MLC milestones</div>
+      <div class="content-body" style="flex-direction: column; gap: 16px; overflow-y: auto;">
+        <table class="data-table" style="font-size:0.82rem;">
+          <thead>
+            <tr>
+              <th>Milestone</th>
+              <th>Key Events</th>
+              <th>Properties</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>M1: Create & Distribute</strong><br><span
+                  style="color:var(--text-secondary); font-size:0.75rem;">Late May 2025</span></td>
+              <td>
+                mlc_course_created<br>mlc_language_added<br>mlc_auto_translate_completed<br>mlc_scorm_download_initiated<br>mlc_scorm_download_failed
+              </td>
+              <td>course_id, language, method (auto/manual/XLIFF), duration_ms, package_size_mb, error_code</td>
+            </tr>
+            <tr>
+              <td><strong>M2: Analytics & Review</strong><br><span
+                  style="color:var(--text-secondary); font-size:0.75rem;">Late June 2025</span></td>
+              <td>
+                mlc_insights_viewed<br>mlc_gradebook_viewed<br>mlc_language_removed<br>mlc_csv_export<br>mlc_reviewer_language_selected
+              </td>
+              <td>view_type (all_languages / specific), filter_language, includes_all_languages</td>
+            </tr>
+            <tr>
+              <td><strong>M3: XLIFF & PDF</strong><br><span
+                  style="color:var(--text-secondary); font-size:0.75rem;">Early July 2025</span></td>
+              <td>mlc_xliff_exported<br>mlc_xliff_imported<br>mlc_pdf_language_selected</td>
+              <td>course_id, language, word_count</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="insight-card">
+          <div class="label">Design Principle</div>
+          Every event captures the <strong>context</strong> needed for funnel analysis (which method? which language?) —
+          not just that an action occurred. This enables cohort analysis by translation method and language count.
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 20: SUCCESS KPIS ═══════ -->
+    <div class="slide slide-content" data-slide="20">
+      <h2>Success KPIs & Targets</h2>
+      <div class="slide-subtitle">What "good" looks like at 3 and 6 months post-launch</div>
+      <div class="content-body" style="flex-direction: column; gap: 20px;">
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="value">40%</div>
+            <div class="label">MLC Adoption Rate<br>(AT customers, 3mo)</div>
+          </div>
+          <div class="kpi-card green">
+            <div class="value">-30%</div>
+            <div class="label">Duplicate Course<br>Reduction (6mo)</div>
+          </div>
+          <div class="kpi-card amber">
+            <div class="value">+15%</div>
+            <div class="label">AT Add-on<br>Purchase Growth</div>
+          </div>
+          <div class="kpi-card purple">
+            <div class="value">>95%</div>
+            <div class="label">SCORM Download<br>Success Rate</div>
+          </div>
+        </div>
+        <div style="display: flex; gap: 16px; flex: 1;">
+          <div class="insight-card success" style="flex:1;">
+            <div class="label">At 3 Months</div>
+            ✅ 40%+ AT customers created ≥1 MLC course<br>
+            ✅ Average 3+ languages per MLC course<br>
+            ✅ CSAT ≥ 4.0 for MLC workflow<br>
+            ✅ SCORM download success rate >95%
+          </div>
+          <div class="insight-card" style="flex:1;">
+            <div class="label">At 6 Months</div>
+            ✅ Tier 2/3 churn rate measurably improved<br>
+            ✅ MLC embedded in standard workflows<br>
+            ✅ Centralized analytics actively used<br>
+            ✅ 15%+ increase in AT add-on purchases
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 21: EXPERIMENT DESIGN ═══════ -->
+    <div class="slide slide-content" data-slide="21">
+      <h2>Experiment Framework</h2>
+      <div class="slide-subtitle">Three experiments to validate the MLC hypothesis rigorously</div>
+      <div class="content-body" style="flex-direction: column; gap: 14px;">
+        <div class="rec-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+          <div class="rec-card priority" style="border-left-color: var(--accent-blue);">
+            <h4>Exp 1: Duplicate Reduction</h4>
+            <p><strong>H:</strong> MLC reduces duplicate course creation ≥30%<br>
+              <strong>Method:</strong> Interrupted time series (pre/post MLC)<br>
+              <strong>Duration:</strong> 6 months<br>
+              <strong>Control:</strong> Pre-MLC baseline per org
+            </p>
+          </div>
+          <div class="rec-card" style="border-left-color: var(--accent-purple);">
+            <h4>Exp 2: Retention Impact</h4>
+            <p><strong>H:</strong> MLC adopters churn less than non-adopters<br>
+              <strong>Method:</strong> Propensity score matching on pre-MLC engagement<br>
+              <strong>Duration:</strong> 90-day retention<br>
+              <strong>Caution:</strong> Selection bias mitigation required
+            </p>
+          </div>
+          <div class="rec-card growth">
+            <h4>Exp 3: Onboarding A/B</h4>
+            <p><strong>H:</strong> Guided MLC onboarding increases adoption 20%<br>
+              <strong>Method:</strong> A/B test (standard vs guided tutorial)<br>
+              <strong>Metric:</strong> Time-to-first-MLC-course<br>
+              <strong>Timing:</strong> Post-launch optimization
+            </p>
+          </div>
+        </div>
+        <div class="insight-card warning" style="margin-top: 4px;">
+          <div class="label">Risk Monitoring Triggers</div>
+          <strong>SCORM failures >5%</strong> → implement size warning &nbsp; | &nbsp;
+          <strong>Adoption <10% at 1mo</strong> → CSM outreach campaign &nbsp; | &nbsp;
+              <strong>CSAT <3.5< /strong> → pause rollout &nbsp; | &nbsp;
+                  <strong>Auto-translate >60s</strong> → engineering optimization
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════ SLIDE 22: CLOSING ═══════ -->
+    <div class="slide part-divider" data-slide="22">
+      <div class="part-label">Summary</div>
+      <h2>From Data to Decisions</h2>
+      <p style="max-width: 700px; line-height: 1.8; font-size: 1.05rem;">
+        The data is here. The opportunities are clear — from activating the "missing middle" to leveraging AI as a
+        conversion driver. For MLC, I've designed a measurement framework that ensures we'll actually know if we've
+        succeeded.<br><br>
+        <span style="color: var(--accent-cyan); font-weight: 600;">My first priority as Head of Insights:</span><br>
+        Establish the measurement foundations — clean event taxonomy, reliable dashboards, and embedded analytics in
+        every product decision.
+      </p>
+    </div>
+
+    <!-- ═══════ SLIDE 22: Q&A ═══════ -->
+    <div class="slide slide-title" data-slide="22">
+      <h1>Thank You</h1>
+      <div class="subtitle">Questions & Discussion</div>
+      <div class="author">Ankush Wadhwa</div>
+      <div class="date">ankushwadhwa13@gmail.com</div>
+    </div>
+
   </div>
-</div>
 
-<!-- ═══════ SLIDE 5: USER SEGMENTATION ═══════ -->
-<div class="slide slide-content" data-slide="5">
-  <h2>The "Missing Middle" Problem</h2>
-  <div class="slide-subtitle">70% of active users are light users — the middle tiers are underdeveloped</div>
-  <div class="chart-with-notes" style="flex:1; width:100%;">
-    <div class="chart-side"><img src="charts/02_user_segmentation.png" alt=""></div>
-    <div class="notes-side">
-      <div class="insight-card critical">
-        <div class="label">Key Finding</div>
-        <strong>70.2% of active users</strong> only use the platform 1-3 days/month. Just 0.4% are power users.
-      </div>
-      <div class="insight-card">
-        <div class="label">What This Means</div>
-        Most users create content sporadically. The gap between Light (1-3 days) and Casual (4-9 days) is where intervention can drive the most value.
-      </div>
-      <div class="insight-card success">
-        <div class="label">Recommendation</div>
-        Build engagement loops: incomplete course nudges, collaborative review invitations, weekly content performance digests to activate light users.
-      </div>
+  <!-- Navigation -->
+  <div class="nav-bar">
+    <div class="nav-controls">
+      <button class="nav-btn" onclick="prevSlide()">← Prev</button>
+      <button class="nav-btn" onclick="nextSlide()">Next →</button>
+    </div>
+    <div class="slide-counter" id="slideCounter">1 / 22</div>
+    <div class="nav-controls">
+      <button class="nav-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
     </div>
   </div>
-</div>
 
-<!-- ═══════ SLIDE 6: PLAN ENGAGEMENT ═══════ -->
-<div class="slide slide-content" data-slide="6">
-  <h2>Engagement by Plan Tier</h2>
-  <div class="slide-subtitle">Team & Pro users are most engaged per-capita; Enterprise has massive seat underutilization</div>
-  <div class="chart-with-notes" style="flex:1; width:100%;">
-    <div class="chart-side"><img src="charts/03_plan_engagement.png" alt=""></div>
-    <div class="notes-side">
-      <div class="insight-card success">
-        <div class="label">Team Plan Outperforms</div>
-        <strong>326 events/user, 5.6 courses/user</strong> — the most engaged cohort. Active L&D teams collaborating heavily.
-      </div>
-      <div class="insight-card warning">
-        <div class="label">Enterprise Seat Utilization</div>
-        Enterprise drives 57% of total events but only <strong>189 events/user</strong>. Many underutilized seats = expansion opportunity.
-      </div>
-      <div class="insight-card critical">
-        <div class="label">Trial ≈ Free</div>
-        Trial (58 events) ≈ Free (61 events). <strong>The trial isn't demonstrating paid value.</strong> Funnel redesign needed.
-      </div>
-    </div>
-  </div>
-</div>
+  <script>
+    let currentSlide = 1;
+    const totalSlides = document.querySelectorAll('.slide').length;
 
-<!-- ═══════ SLIDE 7: ACTIVE VS DORMANT ═══════ -->
-<div class="slide slide-content" data-slide="7">
-  <h2>Active vs Dormant Users</h2>
-  <div class="slide-subtitle">76.6% of registered authors had zero activity in May — a re-engagement opportunity</div>
-  <div class="chart-with-notes" style="flex:1; width:100%;">
-    <div class="chart-side"><img src="charts/15_active_dormant.png" alt=""></div>
-    <div class="notes-side">
-      <div class="insight-card">
-        <div class="label">The Gap</div>
-        <strong>48,489 authors</strong> are dormant. Segmenting by recency and plan tier would enable targeted win-back campaigns.
-      </div>
-      <div class="insight-card">
-        <div class="label">Plan Breakdown</div>
-        <img src="charts/13_plan_distribution.png" alt="" style="width:100%; border-radius:8px; margin-top:8px;">
-      </div>
-    </div>
-  </div>
-</div>
+    function showSlide(n) {
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      currentSlide = Math.max(1, Math.min(n, totalSlides));
+      document.querySelector(`[data-slide="${currentSlide}"]`).classList.add('active');
+      document.getElementById('slideCounter').textContent = `${currentSlide} / ${totalSlides}`;
+      document.getElementById('progressBar').style.width = `${(currentSlide / totalSlides) * 100}%`;
+    }
 
-<!-- ═══════ SLIDE 8: USER FUNNEL ═══════ -->
-<div class="slide slide-content" data-slide="8">
-  <h2>User Journey Funnel</h2>
-  <div class="slide-subtitle">From sign-in to value delivery — where users drop off</div>
-  <div class="chart-with-notes" style="flex:1; width:100%;">
-    <div class="chart-side"><img src="charts/04_user_funnel.png" alt=""></div>
-    <div class="notes-side">
-      <div class="insight-card">
-        <div class="label">Sign In → Edit</div>
-        11% drop — some users sign in for admin/review tasks only
-      </div>
-      <div class="insight-card warning">
-        <div class="label">Preview → Publish</div>
-        <strong>~1,039 users preview but never publish.</strong> These "almost there" users could be nudged with in-app prompts.
-      </div>
-      <div class="insight-card">
-        <div class="label">Publish → SCORM</div>
-        41% drop — many share via private link rather than SCORM. Different distribution patterns.
-      </div>
-    </div>
-  </div>
-</div>
+    function nextSlide() { showSlide(currentSlide + 1); }
+    function prevSlide() { showSlide(currentSlide - 1); }
 
-<!-- ═══════ SLIDE 9: FEATURE ADOPTION ═══════ -->
-<div class="slide slide-content" data-slide="9">
-  <h2>Feature Adoption</h2>
-  <div class="slide-subtitle">Collaboration is the most adopted advanced feature; AI shows strong growth</div>
-  <div class="chart-with-notes" style="flex:1; width:100%;">
-    <div class="chart-side"><img src="charts/05_feature_adoption.png" alt=""></div>
-    <div class="notes-side">
-      <div class="insight-card success">
-        <div class="label">Collaboration = Stickiest</div>
-        <strong>58% of MAU</strong> use collaboration features. Co-authoring correlates with deeper engagement — use as account health indicator.
-      </div>
-      <div class="insight-card">
-        <div class="label">AI Adoption</div>
-        <strong>31.4% of MAU use EasyAI</strong> — primarily Enterprise (57%) and Team (28%). Position AI as conversion driver for Free → Paid.
-      </div>
-      <div class="insight-card">
-        <div class="label">Translation Baseline</div>
-        <strong>815 users (5.5%)</strong> use translation — this is the MLC pre-launch baseline. Critical for Part 2.
-      </div>
-    </div>
-  </div>
-</div>
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+      } else {
+        document.exitFullscreen();
+      }
+    }
 
-<!-- ═══════ SLIDE 10: DAILY + TEMPORAL ═══════ -->
-<div class="slide slide-content" data-slide="10">
-  <h2>Temporal Patterns</h2>
-  <div class="slide-subtitle">Peak activity mid-week, European business hours (UTC), negligible weekends</div>
-  <div class="split-content" style="flex:1; width:100%;">
-    <img src="charts/06_daily_activity.png" alt="" style="width:100%;">
-    <img src="charts/07_temporal_patterns.png" alt="" style="width:100%;">
-  </div>
-</div>
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
+      if (e.key === 'f') { toggleFullscreen(); }
+    });
 
-<!-- ═══════ SLIDE 11: RETENTION ═══════ -->
-<div class="slide slide-content" data-slide="11">
-  <h2>Weekly Retention</h2>
-  <div class="slide-subtitle">Week-over-week retention declining from 60.4% to 47.7% — warrants monitoring</div>
-  <div class="chart-with-notes" style="flex:1; width:100%;">
-    <div class="chart-side"><img src="charts/08_weekly_retention.png" alt=""></div>
-    <div class="notes-side">
-      <div class="insight-card critical">
-        <div class="label">Declining Trend</div>
-        Retention dropped from <strong>60.4% → 47.7%</strong> across May. Roughly half of users active in any given week don't return the following week.
-      </div>
-      <div class="insight-card">
-        <div class="label">Context</div>
-        This may be seasonal or reflect the periodic nature of course authoring. Need 6-12 months of data to separate structural vs. seasonal patterns.
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ SLIDE 12: GEOGRAPHY + CONTENT ═══════ -->
-<div class="slide slide-content" data-slide="12">
-  <h2>Geographic Engagement & Content Depth</h2>
-  <div class="slide-subtitle">Non-English markets significantly more engaged; Text + Image blocks dominate</div>
-  <div class="split-content" style="flex:1; width:100%;">
-    <img src="charts/09_geographic_engagement.png" alt="">
-    <img src="charts/10_content_blocks.png" alt="">
-  </div>
-</div>
-
-<!-- ═══════ SLIDE 13: CREATION METHODS ═══════ -->
-<div class="slide slide-content" data-slide="13">
-  <h2>Course Creation Methods</h2>
-  <div class="slide-subtitle">AI-assisted creation is already the 2nd most popular method</div>
-  <div class="chart-with-notes" style="flex:1; width:100%;">
-    <div class="chart-side"><img src="charts/11_creation_methods.png" alt=""></div>
-    <div class="notes-side">
-      <div class="insight-card success">
-        <div class="label">AI Traction</div>
-        <strong>"Describe & Generate" (7,226)</strong> nearly matches Dynamic (7,870). AI is reshaping how courses are built.
-      </div>
-      <div class="insight-card warning">
-        <div class="label">Template Underuse</div>
-        Templates only at <strong>767 uses</strong> despite organizational template features existing. Opportunity to promote as productivity multiplier.
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ SLIDE 14: RECOMMENDATIONS ═══════ -->
-<div class="slide slide-content" data-slide="14">
-  <h2>Strategic Recommendations</h2>
-  <div class="slide-subtitle">Three priorities, three growth opportunities, two measurement improvements</div>
-  <div class="rec-grid" style="flex:1; width:100%;">
-    <div class="rec-card priority">
-      <h4>🎯 1. Address the "Missing Middle"</h4>
-      <p>70% of users are light. Build engagement loops: incomplete course nudges, collaborative review invitations, weekly content performance digests.</p>
-    </div>
-    <div class="rec-card priority">
-      <h4>🎯 2. Fix the Trial → Paid Funnel</h4>
-      <p>Trial users (58 events) ≈ Free users (61 events). Redesign trial to guide users through Create → Collaborate → Publish lifecycle.</p>
-    </div>
-    <div class="rec-card priority">
-      <h4>🎯 3. Re-engage Dormant Authors</h4>
-      <p>48,489 authors (77%) had zero May activity. Segment by recency and plan for targeted win-back campaigns.</p>
-    </div>
-    <div class="rec-card growth">
-      <h4>📈 4. AI as Conversion Driver</h4>
-      <p>31% adoption with strong Enterprise skew. Position EasyAI more prominently in Free/Trial as a value differentiator.</p>
-    </div>
-    <div class="rec-card growth">
-      <h4>📈 5. Collaboration for Expansion</h4>
-      <p>58% of active users collaborate. Build health scores around collaboration depth per org for CSM-driven retention.</p>
-    </div>
-    <div class="rec-card growth">
-      <h4>📈 6. Non-English Market Potential</h4>
-      <p>Brazil (560 evt/user) is 2.7× more engaged than US (206). These markets benefit disproportionately from MLC.</p>
-    </div>
-    <div class="rec-card measure">
-      <h4>🔍 7. Track Course Lifecycle</h4>
-      <p>Add metrics for time-to-first-publish, publish-to-learner-completion, and course iteration cycles.</p>
-    </div>
-    <div class="rec-card measure">
-      <h4>🔍 8. Org Health Dashboards</h4>
-      <p>Per-org metrics for active users, courses, publishing rates, and feature adoption to enable CSM-driven retention.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ SLIDE 15: PART 2 DIVIDER ═══════ -->
-<div class="slide part-divider" data-slide="15">
-  <div class="part-label">Part 2</div>
-  <h2>Data & Measurement Strategy</h2>
-  <p>MLC (Multi-Language Courses) — Pre-launch baselines, success metrics, and experiment design</p>
-</div>
-
-<!-- ═══════ SLIDE 16: TRANSLATION BASELINE ═══════ -->
-<div class="slide slide-content" data-slide="16">
-  <h2>Current Translation Baseline</h2>
-  <div class="slide-subtitle">815 users already use translation features — this is our MLC "before" picture</div>
-  <div class="chart-with-notes" style="flex:1; width:100%;">
-    <div class="chart-side"><img src="charts/12_translation_baseline.png" alt=""></div>
-    <div class="notes-side">
-      <div class="insight-card">
-        <div class="label">Current State</div>
-        <strong>6,523 translation events</strong> from 815 users. Auto-translation dominates. XLIFF usage minimal (67 exports, 64 imports) — confirms PRD finding.
-      </div>
-      <div class="insight-card success">
-        <div class="label">Why This Matters</div>
-        These 815 users are:<br>
-        • Our best <strong>beta candidates</strong><br>
-        • Our <strong>baseline cohort</strong> for measuring MLC impact<br>
-        • Proof of demand for the feature
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ SLIDE 17: PRE-LAUNCH BASELINES ═══════ -->
-<div class="slide slide-content" data-slide="17">
-  <h2>Pre-Launch: Baselines to Establish</h2>
-  <div class="slide-subtitle">Before we launch, we need to measure what "before" looks like</div>
-  <div class="content-body" style="flex-direction: column; gap: 16px; overflow-y: auto;">
-    <table class="data-table">
-      <thead>
-        <tr><th>Metric</th><th>Source</th><th>Current Baseline</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Translation feature users/month</td><td>Events data</td><td><strong>815 users</strong></td></tr>
-        <tr><td>Auto-translation events/month</td><td>Events data</td><td><strong>6,523 events</strong></td></tr>
-        <tr><td>XLIFF export/import volume</td><td>Events data</td><td><strong>67 exports, 64 imports</strong></td></tr>
-        <tr><td>Duplicated courses per org (translation-driven)</td><td>DB query</td><td><em>To be measured</em></td></tr>
-        <tr><td>Time to create translated course (E2E)</td><td>Session analysis</td><td><em>To be measured</em></td></tr>
-        <tr><td>Tier 2/3 churn rate (pre-MLC)</td><td>Subscription data</td><td><em>To be measured</em></td></tr>
-        <tr><td>NPS/CSAT for translation workflows</td><td>Survey</td><td><em>To be measured</em></td></tr>
-        <tr><td>SCORM download failures (size-related)</td><td>Server logs</td><td><em>To be measured</em></td></tr>
-      </tbody>
-    </table>
-    <div class="insight-card warning" style="margin-top:8px;">
-      <div class="label">Critical Pre-Launch Action</div>
-      Measure duplicated courses created specifically for translation per Tier 2/3 org. The MLC hypothesis centers on reducing this — we need a defensible baseline before launch.
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ SLIDE 18: EVENT TAXONOMY ═══════ -->
-<div class="slide slide-content" data-slide="18">
-  <h2>Tracking Plan: New Event Taxonomy</h2>
-  <div class="slide-subtitle">28 new events aligned to the 3 MLC milestones</div>
-  <div class="content-body" style="flex-direction: column; gap: 16px; overflow-y: auto;">
-    <table class="data-table" style="font-size:0.82rem;">
-      <thead>
-        <tr><th>Milestone</th><th>Key Events</th><th>Properties</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>M1: Create & Distribute</strong><br><span style="color:var(--text-secondary); font-size:0.75rem;">Late May 2025</span></td>
-          <td>mlc_course_created<br>mlc_language_added<br>mlc_auto_translate_completed<br>mlc_scorm_download_initiated<br>mlc_scorm_download_failed</td>
-          <td>course_id, language, method (auto/manual/XLIFF), duration_ms, package_size_mb, error_code</td>
-        </tr>
-        <tr>
-          <td><strong>M2: Analytics & Review</strong><br><span style="color:var(--text-secondary); font-size:0.75rem;">Late June 2025</span></td>
-          <td>mlc_insights_viewed<br>mlc_gradebook_viewed<br>mlc_language_removed<br>mlc_csv_export<br>mlc_reviewer_language_selected</td>
-          <td>view_type (all_languages / specific), filter_language, includes_all_languages</td>
-        </tr>
-        <tr>
-          <td><strong>M3: XLIFF & PDF</strong><br><span style="color:var(--text-secondary); font-size:0.75rem;">Early July 2025</span></td>
-          <td>mlc_xliff_exported<br>mlc_xliff_imported<br>mlc_pdf_language_selected</td>
-          <td>course_id, language, word_count</td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="insight-card">
-      <div class="label">Design Principle</div>
-      Every event captures the <strong>context</strong> needed for funnel analysis (which method? which language?) — not just that an action occurred. This enables cohort analysis by translation method and language count.
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ SLIDE 19: SUCCESS KPIS ═══════ -->
-<div class="slide slide-content" data-slide="19">
-  <h2>Success KPIs & Targets</h2>
-  <div class="slide-subtitle">What "good" looks like at 3 and 6 months post-launch</div>
-  <div class="content-body" style="flex-direction: column; gap: 20px;">
-    <div class="kpi-grid">
-      <div class="kpi-card"><div class="value">40%</div><div class="label">MLC Adoption Rate<br>(AT customers, 3mo)</div></div>
-      <div class="kpi-card green"><div class="value">-30%</div><div class="label">Duplicate Course<br>Reduction (6mo)</div></div>
-      <div class="kpi-card amber"><div class="value">+15%</div><div class="label">AT Add-on<br>Purchase Growth</div></div>
-      <div class="kpi-card purple"><div class="value">>95%</div><div class="label">SCORM Download<br>Success Rate</div></div>
-    </div>
-    <div style="display: flex; gap: 16px; flex: 1;">
-      <div class="insight-card success" style="flex:1;">
-        <div class="label">At 3 Months</div>
-        ✅ 40%+ AT customers created ≥1 MLC course<br>
-        ✅ Average 3+ languages per MLC course<br>
-        ✅ CSAT ≥ 4.0 for MLC workflow<br>
-        ✅ SCORM download success rate >95%
-      </div>
-      <div class="insight-card" style="flex:1;">
-        <div class="label">At 6 Months</div>
-        ✅ Tier 2/3 churn rate measurably improved<br>
-        ✅ MLC embedded in standard workflows<br>
-        ✅ Centralized analytics actively used<br>
-        ✅ 15%+ increase in AT add-on purchases
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ SLIDE 20: EXPERIMENT DESIGN ═══════ -->
-<div class="slide slide-content" data-slide="20">
-  <h2>Experiment Framework</h2>
-  <div class="slide-subtitle">Three experiments to validate the MLC hypothesis rigorously</div>
-  <div class="content-body" style="flex-direction: column; gap: 14px;">
-    <div class="rec-grid" style="grid-template-columns: 1fr 1fr 1fr;">
-      <div class="rec-card priority" style="border-left-color: var(--accent-blue);">
-        <h4>Exp 1: Duplicate Reduction</h4>
-        <p><strong>H:</strong> MLC reduces duplicate course creation ≥30%<br>
-        <strong>Method:</strong> Interrupted time series (pre/post MLC)<br>
-        <strong>Duration:</strong> 6 months<br>
-        <strong>Control:</strong> Pre-MLC baseline per org</p>
-      </div>
-      <div class="rec-card" style="border-left-color: var(--accent-purple);">
-        <h4>Exp 2: Retention Impact</h4>
-        <p><strong>H:</strong> MLC adopters churn less than non-adopters<br>
-        <strong>Method:</strong> Propensity score matching on pre-MLC engagement<br>
-        <strong>Duration:</strong> 90-day retention<br>
-        <strong>Caution:</strong> Selection bias mitigation required</p>
-      </div>
-      <div class="rec-card growth">
-        <h4>Exp 3: Onboarding A/B</h4>
-        <p><strong>H:</strong> Guided MLC onboarding increases adoption 20%<br>
-        <strong>Method:</strong> A/B test (standard vs guided tutorial)<br>
-        <strong>Metric:</strong> Time-to-first-MLC-course<br>
-        <strong>Timing:</strong> Post-launch optimization</p>
-      </div>
-    </div>
-    <div class="insight-card warning" style="margin-top: 4px;">
-      <div class="label">Risk Monitoring Triggers</div>
-      <strong>SCORM failures >5%</strong> → implement size warning &nbsp; | &nbsp;
-      <strong>Adoption <10% at 1mo</strong> → CSM outreach campaign &nbsp; | &nbsp;
-      <strong>CSAT <3.5</strong> → pause rollout &nbsp; | &nbsp;
-      <strong>Auto-translate >60s</strong> → engineering optimization
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ SLIDE 21: CLOSING ═══════ -->
-<div class="slide part-divider" data-slide="21">
-  <div class="part-label">Summary</div>
-  <h2>From Data to Decisions</h2>
-  <p style="max-width: 700px; line-height: 1.8; font-size: 1.05rem;">
-    The data is here. The opportunities are clear — from activating the "missing middle" to leveraging AI as a conversion driver. For MLC, I've designed a measurement framework that ensures we'll actually know if we've succeeded.<br><br>
-    <span style="color: var(--accent-cyan); font-weight: 600;">My first priority as Head of Insights:</span><br>
-    Establish the measurement foundations — clean event taxonomy, reliable dashboards, and embedded analytics in every product decision.
-  </p>
-</div>
-
-<!-- ═══════ SLIDE 22: Q&A ═══════ -->
-<div class="slide slide-title" data-slide="22">
-  <h1>Thank You</h1>
-  <div class="subtitle">Questions & Discussion</div>
-  <div class="author">Ankush Wadhwa</div>
-  <div class="date">ankushwadhwa13@gmail.com</div>
-</div>
-
-</div>
-
-<!-- Navigation -->
-<div class="nav-bar">
-  <div class="nav-controls">
-    <button class="nav-btn" onclick="prevSlide()">← Prev</button>
-    <button class="nav-btn" onclick="nextSlide()">Next →</button>
-  </div>
-  <div class="slide-counter" id="slideCounter">1 / 22</div>
-  <div class="nav-controls">
-    <button class="nav-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
-  </div>
-</div>
-
-<script>
-let currentSlide = 1;
-const totalSlides = document.querySelectorAll('.slide').length;
-
-function showSlide(n) {
-  document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
-  currentSlide = Math.max(1, Math.min(n, totalSlides));
-  document.querySelector(`[data-slide="${currentSlide}"]`).classList.add('active');
-  document.getElementById('slideCounter').textContent = `${currentSlide} / ${totalSlides}`;
-  document.getElementById('progressBar').style.width = `${(currentSlide / totalSlides) * 100}%`;
-}
-
-function nextSlide() { showSlide(currentSlide + 1); }
-function prevSlide() { showSlide(currentSlide - 1); }
-
-function toggleFullscreen() {
-  if (!document.fullscreenElement) {
-    document.documentElement.requestFullscreen();
-  } else {
-    document.exitFullscreen();
-  }
-}
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
-  if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
-  if (e.key === 'f') { toggleFullscreen(); }
-});
-
-showSlide(1);
-</script>
+    showSlide(1);
+  </script>
 
 </body>
+
 </html>
