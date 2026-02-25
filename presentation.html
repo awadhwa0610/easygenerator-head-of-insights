@@ -57,6 +57,28 @@
       animation: fadeIn 0.3s ease;
     }
 
+    .slide::before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      width: 120px;
+      height: 36px;
+      background: url('EasyGenerator Logo.png') no-repeat center / contain;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    .slide.slide-title::before,
+    .slide.part-divider::before {
+      right: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 20px;
+      width: 140px;
+      height: 42px;
+    }
+
     .slide.active {
       display: flex;
     }
@@ -340,6 +362,42 @@
       padding: 0 30px;
       border-top: 1px solid var(--bg-accent);
       z-index: 100;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-bar.hidden {
+      transform: translateY(100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .nav-show-btn {
+      position: fixed;
+      bottom: 12px;
+      right: 20px;
+      background: rgba(54, 62, 78, 0.85);
+      color: var(--text-primary);
+      border: 1px solid var(--bg-accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.78rem;
+      z-index: 101;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-show-btn.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .nav-show-btn:hover {
+      background: var(--accent-blue);
+      border-color: var(--accent-blue);
     }
 
     .nav-bar .slide-counter {
@@ -538,7 +596,7 @@
             <div class="tool-desc">Rapid data profiling — schema inspection, cardinality checks, sampling</div>
           </div>
         </div>
-        <div style="display: flex; gap: 14px; flex:1;">
+        <div style="display: flex; gap: 14px;">
           <div class="insight-card" style="flex:1;">
             <div class="label">Data Sources</div>
             <strong>authors.csv</strong> — 63,279 user records (country, plan, org, registration date)<br>
@@ -640,10 +698,7 @@
             <div class="insight-card warning">
               <div class="label">Observation</div>
               <strong>DAU/MAU of 10.9%</strong> sits at the lower end of the B2B SaaS benchmark range (10–20%,
-              per <a href="https://mixpanel.com/blog/dau-mau-ratio/" target="_blank"
-                style="color:var(--accent-cyan);">Mixpanel</a>
-              and <a href="https://statsig.com/blog/dau-mau" target="_blank"
-                style="color:var(--accent-cyan);">Statsig</a> benchmarks).
+              per Sequoia Capital and industry benchmarks).
               This is expected for periodic-use authoring tools — authors create courses weekly/monthly, not daily — but
               signals room for improvement through engagement loops.
             </div>
@@ -936,36 +991,62 @@
     </div>
 
     <!-- ═══════ SLIDE 16: GROWTH & MEASUREMENT ═══════ -->
-    <div class="slide slide-content" data-slide="16">
+    <div class="slide slide-content" data-slide="16" style="overflow-y:auto;">
       <h2>Growth Opportunities & Measurement</h2>
       <div class="slide-subtitle">Three growth levers and two measurement improvements</div>
-      <div class="rec-grid" style="flex:1; width:100%; grid-template-columns: repeat(3,1fr); gap:20px;">
-        <div class="rec-card growth">
+      <div style="width:100%; margin-bottom:4px;"><strong style="color:var(--accent-cyan); font-size:0.85rem;">📈 GROWTH
+          OPPORTUNITIES</strong></div>
+      <div class="rec-grid" style="width:100%; grid-template-columns: repeat(3,1fr); gap:16px; align-content:start;">
+        <div class="rec-card growth" style="max-width:320px;">
           <h4>📈 4. AI as Conversion Driver</h4>
-          <p>31% adoption with strong Enterprise skew. Position EasyAI in Free/Trial as a
-            value differentiator.</p>
+          <p><strong>Problem:</strong> AI adoption is at 31% but heavily skewed toward Enterprise. Free and Trial users
+            aren't seeing AI's value during onboarding.<br>
+            <strong>Strategy:</strong> Position EasyAI prominently in Free/Trial tiers as the key differentiator.
+            Showcase AI course creation during onboarding and trial period.<br>
+            <strong>Expected Impact:</strong> Increase trial-to-paid conversion by demonstrating AI value early.
+          </p>
         </div>
-        <div class="rec-card growth">
+        <div class="rec-card growth" style="max-width:320px;">
           <h4>📈 5. Collaboration for Expansion</h4>
-          <p>58% of active users collaborate. Build health scores around collaboration depth
-            per org for CSM retention.</p>
+          <p><strong>Problem:</strong> 58% of active users collaborate, but collaboration depth isn't tracked per
+            organization.<br>
+            <strong>Strategy:</strong> Build health scores around collaboration depth per org. Use these scores to drive
+            CSM-led retention and upsell conversations.<br>
+            <strong>Expected Impact:</strong> Reduce churn in Tier 2/3 accounts through proactive engagement.
+          </p>
         </div>
-        <div class="rec-card growth">
+        <div class="rec-card growth" style="max-width:320px;">
           <h4>📈 6. Non-English Market Potential</h4>
-          <p>Brazil (560 evt/user) is 2.7× more engaged than US (206). These markets benefit
-            disproportionately from MLC.</p>
+          <p><strong>Problem:</strong> Brazil (560 evt/user) is 2.7× more engaged than US (206), yet these markets are
+            under-invested.<br>
+            <strong>Strategy:</strong> Prioritize MLC rollout in LATAM and Southern Europe. These markets benefit
+            disproportionately from multilingual capabilities.<br>
+            <strong>Expected Impact:</strong> Accelerate MLC adoption in high-engagement, non-English regions.
+          </p>
         </div>
       </div>
-      <div class="rec-grid" style="width:100%; grid-template-columns: repeat(2,1fr); gap:20px; margin-top: 16px;">
-        <div class="rec-card measure">
+      <div style="width:100%; margin-top:12px; margin-bottom:4px;"><strong
+          style="color:var(--accent-cyan); font-size:0.85rem;">🔍 MEASUREMENT IMPROVEMENTS</strong></div>
+      <div class="rec-grid" style="width:100%; grid-template-columns: repeat(2,1fr); gap:16px; align-content:start;">
+        <div class="rec-card measure" style="max-width:420px;">
           <h4>🔍 7. Track Course Lifecycle</h4>
-          <p>Add metrics for time-to-first-publish, publish-to-learner-completion, and course
-            iteration cycles.</p>
+          <p><strong>Problem:</strong> We don't currently track the full course lifecycle from creation to learner
+            completion.<br>
+            <strong>Strategy:</strong> Add metrics for time-to-first-publish, publish-to-learner-completion, and course
+            iteration cycles.<br>
+            <strong>Expected Impact:</strong> Enable product teams to identify and fix bottlenecks in the authoring
+            workflow.
+          </p>
         </div>
-        <div class="rec-card measure">
+        <div class="rec-card measure" style="max-width:420px;">
           <h4>🔍 8. Org Health Dashboards</h4>
-          <p>Per-org metrics for active users, courses, publishing rates, and feature
-            adoption to enable CSM-driven retention.</p>
+          <p><strong>Problem:</strong> CSMs lack visibility into per-organization health signals for proactive
+            retention.<br>
+            <strong>Strategy:</strong> Build per-org dashboards tracking active users, courses created, publishing
+            rates, and feature adoption.<br>
+            <strong>Expected Impact:</strong> Enable CSM-driven retention through data-backed outreach and expansion
+            conversations.
+          </p>
         </div>
       </div>
     </div>
@@ -1139,7 +1220,7 @@
             <div class="label">SCORM Download<br>Success Rate</div>
           </div>
         </div>
-        <div style="display: flex; gap: 14px; flex: 1;">
+        <div style="display: flex; gap: 14px;">
           <div class="insight-card success" style="flex:1;">
             <div class="label">At 3 Months</div>
             ✅ 40%+ AT customers created ≥1 MLC course<br>
@@ -1225,8 +1306,11 @@
 
   </div>
 
+  <button class="nav-show-btn" id="navShowBtn" onclick="toggleNavBar()" title="Press 'h' to show controls">Show
+    ▲</button>
+
   <!-- Navigation -->
-  <div class="nav-bar">
+  <div class="nav-bar" id="navBar">
     <div class="nav-controls">
       <button class="nav-btn" onclick="prevSlide()">← Prev</button>
       <button class="nav-btn" onclick="nextSlide()">Next →</button>
@@ -1234,6 +1318,7 @@
     <div class="slide-counter" id="slideCounter">1 / 22</div>
     <div class="nav-controls">
       <button class="nav-btn" onclick="toggleFullscreen()">⛶ Fullscreen</button>
+      <button class="nav-btn" onclick="toggleNavBar()" title="Press 'h' to toggle">Hide ▼</button>
     </div>
   </div>
 
@@ -1252,21 +1337,31 @@
     function nextSlide() { showSlide(currentSlide + 1); }
     function prevSlide() { showSlide(currentSlide - 1); }
 
+    function toggleNavBar() {
+      const nav = document.getElementById('navBar');
+      const showBtn = document.getElementById('navShowBtn');
+      nav.classList.toggle('hidden');
+      showBtn.classList.toggle('visible');
+    }
+
     function toggleFullscreen() {
       const el = document.documentElement;
-      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
-        if (el.requestFullscreen) el.requestFullscreen();
-        else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
-      } else {
-        if (document.exitFullscreen) document.exitFullscreen();
-        else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-      }
+      try {
+        if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+          if (el.requestFullscreen) el.requestFullscreen().catch(() => { });
+          else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+        } else {
+          if (document.exitFullscreen) document.exitFullscreen().catch(() => { });
+          else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        }
+      } catch (e) { console.warn('Fullscreen not supported:', e); }
     }
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); nextSlide(); }
       if (e.key === 'ArrowLeft') { e.preventDefault(); prevSlide(); }
       if (e.key === 'f') { toggleFullscreen(); }
+      if (e.key === 'h') { toggleNavBar(); }
     });
 
     showSlide(1);
