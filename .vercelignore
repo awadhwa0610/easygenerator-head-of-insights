@@ -1,0 +1,13 @@
+# Exclude large data files — only deploy the presentation + charts
+events.csv
+authors.csv
+mightymerge.io__6n3xp3sm/
+analysis.py
+generate_charts.py
+__pycache__/
+*.pyc
+.DS_Store
+*.pdf
+*.pdf.txt
+READ_ME.docx
+Job Description
