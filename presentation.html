@@ -522,22 +522,22 @@
     <div class="slide slide-content" data-slide="2">
       <h2>My Approach</h2>
       <div class="slide-subtitle">How I analyzed 2.9M events across 63K authors</div>
-      <div class="content-body" style="flex-direction: column; gap: 20px;">
-        <div class="tools-grid">
-          <div class="tool-card">
-            <div class="tool-name">Python + Pandas</div>
+      <div class="content-body" style="flex-direction: column; gap: 12px;">
+        <div class="tools-grid" style="gap:12px;">
+          <div class="tool-card" style="padding:14px 16px;">
+            <div class="tool-name" style="font-size:1rem;">Python + Pandas</div>
             <div class="tool-desc">Data loading, cleaning, joining 292 event files with 63K author records</div>
           </div>
-          <div class="tool-card">
-            <div class="tool-name">Matplotlib + Seaborn</div>
+          <div class="tool-card" style="padding:14px 16px;">
+            <div class="tool-name" style="font-size:1rem;">Matplotlib + Seaborn</div>
             <div class="tool-desc">Visualization & chart generation for all analytical outputs</div>
           </div>
-          <div class="tool-card">
-            <div class="tool-name">Shell / CLI</div>
+          <div class="tool-card" style="padding:14px 16px;">
+            <div class="tool-name" style="font-size:1rem;">Shell / CLI</div>
             <div class="tool-desc">Rapid data profiling — schema inspection, cardinality checks, sampling</div>
           </div>
         </div>
-        <div style="display: flex; gap: 20px; flex:1;">
+        <div style="display: flex; gap: 14px; flex:1;">
           <div class="insight-card" style="flex:1;">
             <div class="label">Data Sources</div>
             <strong>authors.csv</strong> — 63,279 user records (country, plan, org, registration date)<br>
@@ -558,53 +558,48 @@
     <!-- ═══════ SLIDE 3: RAW DATA EXPLORATION ═══════ -->
     <div class="slide slide-content" data-slide="3">
       <h2>Raw Data Exploration</h2>
-      <div class="slide-subtitle">Shell + Python profiling before writing any analysis code — <a
+      <div class="slide-subtitle">Shell + Python profiling before writing any analysis code &nbsp;·&nbsp; <a
           href="https://github.com/awadhwa0610/easygenerator-head-of-insights/tree/main" target="_blank"
-          style="color:var(--accent-cyan); text-decoration:none;">All assets on GitHub ↗</a></div>
+          style="color:var(--accent-cyan); text-decoration:none;">📁
+          github.com/awadhwa0610/easygenerator-head-of-insights ↗</a></div>
       <div class="content-body"
-        style="display:grid; grid-template-columns: repeat(3,1fr); grid-template-rows: 1fr 1fr; gap:12px; flex:1; min-height:0;">
-        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
-          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+        style="display:grid; grid-template-columns: repeat(3,1fr); grid-template-rows: 1fr 1fr; gap:8px; flex:1; min-height:0;">
+        <div style="display:flex; flex-direction:column; gap:4px; min-height:0;">
+          <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
             Sample Dataset</div>
           <img src="Sample Dataset.png" alt="Sample Dataset"
-            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+            style="width:100%; flex:1; object-fit:contain; border-radius:6px; border:1px solid var(--bg-accent);">
         </div>
-        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
-          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+        <div style="display:flex; flex-direction:column; gap:4px; min-height:0;">
+          <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
             Schema Inspection</div>
           <img src="Schema Inspection.png" alt="Schema Inspection"
-            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+            style="width:100%; flex:1; object-fit:contain; border-radius:6px; border:1px solid var(--bg-accent);">
         </div>
-        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
-          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+        <div style="display:flex; flex-direction:column; gap:4px; min-height:0;">
+          <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
             Unique Active Users (MAU)</div>
           <img src="Unique Active Users.png" alt="Unique Active Users"
-            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+            style="width:100%; flex:1; object-fit:contain; border-radius:6px; border:1px solid var(--bg-accent);">
         </div>
-        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
-          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+        <div style="display:flex; flex-direction:column; gap:4px; min-height:0;">
+          <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
             Plan Distribution</div>
           <img src="Plan Distribution.png" alt="Plan Distribution"
-            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+            style="width:100%; flex:1; object-fit:contain; border-radius:6px; border:1px solid var(--bg-accent);">
         </div>
-        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
-          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">Top
+        <div style="display:flex; flex-direction:column; gap:4px; min-height:0;">
+          <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">Top
             Events by Volume</div>
           <img src="Top Events by Volume.png" alt="Top Events by Volume"
-            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+            style="width:100%; flex:1; object-fit:contain; border-radius:6px; border:1px solid var(--bg-accent);">
         </div>
-        <div style="display:flex; flex-direction:column; gap:6px; min-height:0;">
-          <div style="font-size:0.72rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
+        <div style="display:flex; flex-direction:column; gap:4px; min-height:0;">
+          <div style="font-size:0.68rem; text-transform:uppercase; letter-spacing:1px; color:var(--text-secondary);">
             Date Range of Events</div>
           <img src="Date Range of Events.png" alt="Date Range of Events"
-            style="width:100%; flex:1; object-fit:contain; border-radius:8px; border:1px solid var(--bg-accent);">
+            style="width:100%; flex:1; object-fit:contain; border-radius:6px; border:1px solid var(--bg-accent);">
         </div>
-      </div>
-      <div style="margin-top:10px; font-size:0.78rem; color:var(--text-secondary); text-align:center;">
-        Raw terminal output from initial data profiling — 2.9M events, 63K authors, May 2025 &nbsp;·&nbsp;
-        <a href="https://github.com/awadhwa0610/easygenerator-head-of-insights/tree/main" target="_blank"
-          style="color:var(--accent-cyan); text-decoration:none;">📁
-          github.com/awadhwa0610/easygenerator-head-of-insights</a>
       </div>
     </div>
 
@@ -619,22 +614,22 @@
     <div class="slide slide-content" data-slide="5">
       <h2>Platform Scale & Health</h2>
       <div class="slide-subtitle">Key metrics for May 2025</div>
-      <div class="content-body" style="flex-direction: column; gap: 20px;">
+      <div class="content-body" style="flex-direction: column; gap: 12px;">
         <div class="kpi-grid">
-          <div class="kpi-card">
-            <div class="value">63,279</div>
+          <div class="kpi-card" style="padding:16px;">
+            <div class="value" style="font-size:2rem;">63,279</div>
             <div class="label">Registered Authors</div>
           </div>
-          <div class="kpi-card green">
-            <div class="value">14,790</div>
+          <div class="kpi-card green" style="padding:16px;">
+            <div class="value" style="font-size:2rem;">14,790</div>
             <div class="label">MAU (May 2025)</div>
           </div>
-          <div class="kpi-card amber">
-            <div class="value">10.9%</div>
+          <div class="kpi-card amber" style="padding:16px;">
+            <div class="value" style="font-size:2rem;">10.9%</div>
             <div class="label">DAU/MAU Stickiness</div>
           </div>
-          <div class="kpi-card purple">
-            <div class="value">2.9M</div>
+          <div class="kpi-card purple" style="padding:16px;">
+            <div class="value" style="font-size:2rem;">2.9M</div>
             <div class="label">Total Events</div>
           </div>
         </div>
@@ -845,45 +840,46 @@
     <div class="slide slide-content" data-slide="15">
       <h2>Strategic Recommendations</h2>
       <div class="slide-subtitle">Three priorities, three growth opportunities, two measurement improvements</div>
-      <div class="rec-grid" style="flex:1; width:100%;">
-        <div class="rec-card priority">
-          <h4>🎯 1. Address the "Missing Middle"</h4>
-          <p>70% of users are light. Build engagement loops: incomplete course nudges, collaborative review invitations,
-            weekly content performance digests.</p>
+      <div class="rec-grid" style="flex:1; width:100%; grid-template-columns: repeat(4,1fr); gap:10px;">
+        <div class="rec-card priority" style="padding:12px 14px;">
+          <h4 style="font-size:0.85rem; margin-bottom:4px;">🎯 1. Address the "Missing Middle"</h4>
+          <p style="font-size:0.78rem;">70% of users are light. Build engagement loops: incomplete course nudges,
+            collaborative review invitations, weekly digests.</p>
         </div>
-        <div class="rec-card priority">
-          <h4>🎯 2. Fix the Trial → Paid Funnel</h4>
-          <p>Trial users (58 events) ≈ Free users (61 events). Redesign trial to guide users through Create →
-            Collaborate → Publish lifecycle.</p>
+        <div class="rec-card priority" style="padding:12px 14px;">
+          <h4 style="font-size:0.85rem; margin-bottom:4px;">🎯 2. Fix the Trial → Paid Funnel</h4>
+          <p style="font-size:0.78rem;">Trial (58 events) ≈ Free (61 events). Redesign trial to guide users through
+            Create → Collaborate → Publish.</p>
         </div>
-        <div class="rec-card priority">
-          <h4>🎯 3. Re-engage Dormant Authors</h4>
-          <p>48,489 authors (77%) had zero May activity. Segment by recency and plan for targeted win-back campaigns.
-          </p>
+        <div class="rec-card priority" style="padding:12px 14px;">
+          <h4 style="font-size:0.85rem; margin-bottom:4px;">🎯 3. Re-engage Dormant Authors</h4>
+          <p style="font-size:0.78rem;">48,489 authors (77%) had zero May activity. Segment by recency and plan for
+            targeted win-back campaigns.</p>
         </div>
-        <div class="rec-card growth">
-          <h4>📈 4. AI as Conversion Driver</h4>
-          <p>31% adoption with strong Enterprise skew. Position EasyAI more prominently in Free/Trial as a value
-            differentiator.</p>
+        <div class="rec-card growth" style="padding:12px 14px;">
+          <h4 style="font-size:0.85rem; margin-bottom:4px;">📈 4. AI as Conversion Driver</h4>
+          <p style="font-size:0.78rem;">31% adoption with strong Enterprise skew. Position EasyAI in Free/Trial as a
+            value differentiator.</p>
         </div>
-        <div class="rec-card growth">
-          <h4>📈 5. Collaboration for Expansion</h4>
-          <p>58% of active users collaborate. Build health scores around collaboration depth per org for CSM-driven
-            retention.</p>
+        <div class="rec-card growth" style="padding:12px 14px;">
+          <h4 style="font-size:0.85rem; margin-bottom:4px;">📈 5. Collaboration for Expansion</h4>
+          <p style="font-size:0.78rem;">58% of active users collaborate. Build health scores around collaboration depth
+            per org for CSM retention.</p>
         </div>
-        <div class="rec-card growth">
-          <h4>📈 6. Non-English Market Potential</h4>
-          <p>Brazil (560 evt/user) is 2.7× more engaged than US (206). These markets benefit disproportionately from
-            MLC.</p>
+        <div class="rec-card growth" style="padding:12px 14px;">
+          <h4 style="font-size:0.85rem; margin-bottom:4px;">📈 6. Non-English Market Potential</h4>
+          <p style="font-size:0.78rem;">Brazil (560 evt/user) is 2.7× more engaged than US (206). These markets benefit
+            disproportionately from MLC.</p>
         </div>
-        <div class="rec-card measure">
-          <h4>🔍 7. Track Course Lifecycle</h4>
-          <p>Add metrics for time-to-first-publish, publish-to-learner-completion, and course iteration cycles.</p>
+        <div class="rec-card measure" style="padding:12px 14px;">
+          <h4 style="font-size:0.85rem; margin-bottom:4px;">🔍 7. Track Course Lifecycle</h4>
+          <p style="font-size:0.78rem;">Add metrics for time-to-first-publish, publish-to-learner-completion, and course
+            iteration cycles.</p>
         </div>
-        <div class="rec-card measure">
-          <h4>🔍 8. Org Health Dashboards</h4>
-          <p>Per-org metrics for active users, courses, publishing rates, and feature adoption to enable CSM-driven
-            retention.</p>
+        <div class="rec-card measure" style="padding:12px 14px;">
+          <h4 style="font-size:0.85rem; margin-bottom:4px;">🔍 8. Org Health Dashboards</h4>
+          <p style="font-size:0.78rem;">Per-org metrics for active users, courses, publishing rates, and feature
+            adoption to enable CSM-driven retention.</p>
         </div>
       </div>
     </div>
@@ -1032,7 +1028,7 @@
     <div class="slide slide-content" data-slide="20">
       <h2>Success KPIs & Targets</h2>
       <div class="slide-subtitle">What "good" looks like at 3 and 6 months post-launch</div>
-      <div class="content-body" style="flex-direction: column; gap: 20px;">
+      <div class="content-body" style="flex-direction: column; gap: 12px;">
         <div class="kpi-grid">
           <div class="kpi-card">
             <div class="value">40%</div>
@@ -1051,7 +1047,7 @@
             <div class="label">SCORM Download<br>Success Rate</div>
           </div>
         </div>
-        <div style="display: flex; gap: 16px; flex: 1;">
+        <div style="display: flex; gap: 14px; flex: 1;">
           <div class="insight-card success" style="flex:1;">
             <div class="label">At 3 Months</div>
             ✅ 40%+ AT customers created ≥1 MLC course<br>
@@ -1074,8 +1070,8 @@
     <div class="slide slide-content" data-slide="21">
       <h2>Experiment Framework</h2>
       <div class="slide-subtitle">Three experiments to validate the MLC hypothesis rigorously</div>
-      <div class="content-body" style="flex-direction: column; gap: 14px;">
-        <div class="rec-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+      <div class="content-body" style="flex-direction: column; gap: 10px;">
+        <div class="rec-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
           <div class="rec-card priority" style="border-left-color: var(--accent-blue);">
             <h4>Exp 1: Duplicate Reduction</h4>
             <p><strong>H:</strong> MLC reduces duplicate course creation ≥30%<br>
